@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#16233B">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Révis GEII">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" sizes="512x512" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEm0lEQVR4nMWXW2zURRSHvzPz727pZXehFMXILZVoYsKTwQSC0ZgYLwSjteCDImoVfBAxaAhGfUDjBaxBxAjEBDT4QOWihCBEUQlSQWMIaAxGCqVoiS3SWtqll//M8WF3i+1ubUtBTrLJZrMzv2/O/M6ZGQGACgufuKsm3DyRILJQRWeiOhEIAGF4oUCISJ2o7CDsWvXnyYN1GU3JfBldNn22EfOuiIxBPao6TN3eISIgBlVt9OqfPlO7vxoqrACUTppWboK8zahDvXeIGIa/8r6hqHoxxiIWH3Y/0HSiZotcUzZjXIg/gkgc9R7EXmLhvhwOMQbVvwPMFNONWyzGJv4fcQCxqPdibKIbt9gAs1RVQczlF++BMClNZgWijAd/qfd7QALUI8r4ALm4tIsIxqS4VRXvL6JqRGww9DFgreX8+Q46OrsQhEgkj4KCfJwbevkOad8Da/FeaTrTzOiSkbxX9TLrVi1j7NWlNJ1pxntPEAwtoTKmbPqAyNYaVJWWlnMkEjEen1vOM0/NpbRkJADNLa2sXruRNes38dfZFhLxGMYIzvnhARhjEBFaz7VhjaH83jtYsqiS6ydPAsA5lwZMrfrY8XqWr/yA6m276A5D4rHitD/6B+kXwFpDMtlBZ2cXt86YytLFT3LLtJt6hDNwQI9IBqTm4CFeq1rHnr3fEY1EKMz4Y7AAIkJbWzuTyyay5NlKHiy/OyXsPcIF9/cN7xVVxdqUtaq37eL1t9fxy9E6YsWFWKv09WgWgDGGZPI88x+bw/JlzwEQhiEipmfigSJVDZ4gSBVZ1TtvsXptNW2dUazpDZE1o6oSieTxxVc1rHz/I1rPtRMEAcbIf+7lhSx4jBGCIKC9vZ1XV3xI0P0TU6fEaEt6pE/ycgJYa6mr/4PnX1zBbTMfYdPWz9ONZ+AMZLyx+dPd3D5rHi+98CbHjjegGMjhgpwzqirRaIQxpaOoPV7PvAVLufP+J9h/8BCqmrPZZH7//scj3FOxgIfnL+G32pOMKC2hYEQEkdzF1m8nVFXC0DFiRD5FRYXs3vMtnZ1d7NmxgSwnkUq9iPDK8jXs3PUN144bi6qjtT0k2eHp6MoNMGBOvfc450jEY6kB6a0QkV4fa216i5RYvBjnHM55rIEbr4tww4QIzmnWLWdQZ4H3nmg0wuGfj7J+41Zm33cXYjLlmDanKp/t/JoDPxwmPz+KoJxt9Sx8KMGCR0fRnfT8erKLLw8kiRUaMk1y0IdRypwBi5a+QdXqDVk93znPqd9Pk5cX9Djde6UkYaHYkBcRYkU2JfyvNAzpNDRGKMiP0nC6McuIIpCfH+2BdV6JF1lWfdyCAmebHTv2thEvNKQ7eGrcYA6jviF9izkdWVCA89Da5hAjxIuyLTfk+0AuoX7/B1gDo0cGKNpr5RcAVN3F3ooGCxG6foBVnVGhHjFKrjZ1+UIRoyrUG2C7iAjowI3+0un7lCbbr/zDpKF23yn1WiliRcRYVB2XZzsUVSdirIgV9VrZULvvlIEK23SiZovz4RxFGsUGVvqrs2GEiIjYwCrS6Hw4p+lEzZaex+mVfJ7/A9iDN37g+pGwAAAAAElFTkSuQmCC">
+<link rel="manifest" href="manifest.webmanifest">
+<title>Révis GEII – mon atelier de révision</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<style>
+:root{
+  --paper:#F4F7FB;--grid:rgba(22,35,59,.055);--surface:#FFFFFF;--soft:#EEF2F8;
+  --ink:#16233B;--ink2:#52617C;--line:#D3DBE8;--hl:#FFE45E;
+  --ok:#11785A;--okbg:#E2F4EC;--bad:#C4283A;--badbg:#FBE7EA;--warn:#9A5B00;--warnbg:#FFF1D6;
+  --f-head:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --f-body:'IBM Plex Sans','Segoe UI',system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#0E1524;--grid:rgba(255,255,255,.035);--surface:#161F33;--soft:#1D2842;
+    --ink:#E8EDF7;--ink2:#9AA8C3;--line:#2B3856;--hl:#6E5C08;
+    --ok:#4FD1A5;--okbg:#12362B;--bad:#FF7B89;--badbg:#3D1B22;--warn:#F2B44D;--warnbg:#3A2C10;}
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:12px}
+body{margin:0;font:16px/1.55 var(--f-body);color:var(--ink);background:var(--paper);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px);background-size:100% 30px;background-position:0 6px}
+.wrap{max-width:1180px;margin:0 auto;padding:18px 16px 60px}
+.brand{font:700 26px/1 var(--f-head);margin:6px 0 16px;display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.brand .mark{color:var(--ink);flex:0 0 auto}
+.brand .hl{margin-right:2px}
+.brand .hl{background:linear-gradient(transparent 55%,var(--hl) 55%);padding:0 4px}
+.brand small{font:400 14px var(--f-body);color:var(--ink2)}
+h1,h2,h3{font-family:var(--f-head);line-height:1.15;margin:0}
+h1{font-size:30px}h2{font-size:22px}h3{font-size:17px}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--c,var(--ink));outline-offset:2px}
+
+/* classeur : onglets */
+.tabs{display:flex;align-items:flex-end;gap:3px;overflow-x:auto;scrollbar-width:thin}
+.tabs::after{content:'';flex:1 0 12px;border-bottom:1px solid var(--line)}
+.tab{flex:0 0 auto;padding:9px 16px 8px;background:var(--soft);border:1px solid var(--line);border-top:4px solid var(--c,var(--ink2));
+  border-radius:7px 7px 0 0;cursor:pointer;color:var(--ink2);white-space:nowrap;font-weight:500}
+.tab:hover{color:var(--ink)}
+.tab.on{background:var(--surface);color:var(--ink);border-bottom-color:var(--surface);font-weight:600;box-shadow:0 -2px 6px rgba(22,35,59,.06)}
+.tab.add,.tab.gear{border-top-color:var(--line);background:transparent;border-style:dashed;border-bottom-style:solid}
+.sheet{background:var(--surface);border:1px solid var(--line);border-top:none;border-radius:0 0 8px 8px;min-height:60vh}
+.subhead{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:22px 24px 6px}
+.subhead h1{border-left:6px solid var(--c);padding-left:12px}
+.subnav{display:flex;gap:6px;flex-wrap:wrap;padding:8px 24px 0;border-bottom:1px solid var(--line)}
+.subnav button{background:none;border:0;padding:8px 10px 10px;cursor:pointer;color:var(--ink2);font-weight:500}
+.subnav button.on{color:var(--ink);font-weight:600;background:linear-gradient(transparent 62%,var(--hl) 62%)}
+.pane{padding:22px 24px 30px}
+.dash{padding:26px 24px 30px}
+.muted{color:var(--ink2)}
+.chip{display:inline-block;font-size:13px;padding:2px 9px;border-radius:99px;background:var(--soft);border:1px solid var(--line);color:var(--ink2)}
+.chip.warn{background:var(--warnbg);color:var(--warn);border-color:transparent}
+.chip.ok{background:var(--okbg);color:var(--ok);border-color:transparent}
+.chip.bad{background:var(--badbg);color:var(--bad);border-color:transparent}
+.grade{display:flex;gap:20px;align-items:center;margin:16px 0 20px;flex-wrap:wrap}
+.ring{flex:0 0 auto;width:118px;height:118px;border-radius:47% 53% 54% 46%/54% 46% 52% 48%;border:3px solid var(--bad);transform:rotate(-4deg);display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--surface);box-shadow:0 1px 0 var(--line)}
+.ring b,.ring span{transform:rotate(4deg)}
+.ring b{font:700 32px var(--f-head);line-height:1}
+.ring span{font-size:11.5px;color:var(--ink2);margin-top:3px;text-align:center;max-width:80px}
+.ring.off{border-color:var(--line);border-style:dashed}
+.ring.off b{color:var(--ink2);font-size:26px}
+.grade .lead{flex:1 1 320px;margin:0}
+
+/* boutons & champs */
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid var(--line);background:var(--surface);border-radius:5px;cursor:pointer;font-weight:500}
+.btn:hover{border-color:var(--ink2);transform:translateY(-1px)}
+.btn:active{transform:translateY(0)}
+.btn.pri{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+.btn.pri:hover{opacity:.9}
+.btn.sm{padding:4px 10px;font-size:14px}
+.btn.red{color:var(--bad)}
+.btn.wide{width:100%;justify-content:center;padding:12px}
+.link{background:none;border:0;padding:0;color:var(--ink);text-decoration:underline;cursor:pointer}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:5px;padding:8px 10px;max-width:100%}
+textarea{width:100%;resize:vertical;line-height:1.5}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.gen{background:var(--soft);border:1px solid var(--line);border-radius:6px;padding:14px 16px;margin-bottom:14px}
+.gen h3{margin-bottom:10px}
+.hint{margin:10px 0 0;color:var(--warn);font-size:14px}
+.empty{padding:34px 10px;text-align:center;color:var(--ink2);max-width:520px;margin:0 auto}
+.empty h3{color:var(--ink);margin-bottom:6px}
+.empty .btn{margin-top:12px}
+
+/* jauge graduée */
+.gauge{position:relative;height:12px;background:var(--soft);border:1px solid var(--line);border-radius:3px;min-width:80px}
+.gauge i{position:absolute;left:0;top:0;bottom:0;width:var(--v);background:var(--c,var(--ink));border-radius:2px}
+.gauge::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0,transparent calc(10% - 1px),var(--surface) calc(10% - 1px),var(--surface) 10%)}
+.gauge b{position:absolute;top:-4px;bottom:-4px;left:85%;width:2px;background:var(--ink);z-index:2}
+
+/* tableau de bord */
+.lead{font-size:20px;max-width:46ch;margin:10px 0 4px}
+mark{background:linear-gradient(transparent 55%,var(--hl) 55%);color:inherit;padding:0 2px}
+.subrows{list-style:none;margin:22px 0 0;padding:0;border-top:1px solid var(--line)}
+.subrow{display:grid;grid-template-columns:minmax(150px,1.2fr) 2fr 46px 130px 150px;gap:14px;align-items:center;padding:13px 0;border-bottom:1px solid var(--line)}
+.subrow .name{background:none;border:0;text-align:left;cursor:pointer;font:600 17px var(--f-head);border-left:5px solid var(--c);padding:2px 0 2px 10px}
+.subrow .num{font-weight:600;text-align:right}
+.todo{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:10px}
+.todo li{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;border:1px solid var(--line);border-left:5px solid var(--c);border-radius:5px;padding:10px 14px}
+.banner{background:var(--warnbg);color:var(--warn);border-radius:6px;padding:12px 16px;margin:16px 0;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.steps{margin:8px 0 0;padding-left:20px}
+
+/* cours */
+.split{display:grid;grid-template-columns:270px 1fr;gap:22px}
+.doclist ul{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:6px}
+.doc{width:100%;text-align:left;background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--c);border-radius:5px;padding:8px 10px;cursor:pointer;display:grid}
+.doc small{color:var(--ink2)}
+.doc.on{background:var(--soft);border-color:var(--ink2);border-left-color:var(--c)}
+.editor .title{flex:1 1 280px;font:700 19px var(--f-head)}
+.editor .body{min-height:52vh;margin:12px 0;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14.5px}
+.parts{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:8px}
+.parts li{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap;border:1px solid var(--line);border-radius:5px;padding:8px 12px}
+
+/* markdown rendu */
+.md{max-width:78ch}
+.md h1,.md h2{font-size:20px;margin:18px 0 6px;padding-bottom:3px;border-bottom:2px solid var(--line)}
+.md h3{margin:14px 0 4px}
+.md p{margin:8px 0}.md ul,.md ol{padding-left:22px}
+.md table{border-collapse:collapse;display:block;overflow-x:auto}
+.md th,.md td{border:1px solid var(--line);padding:5px 10px}
+.md code{background:var(--soft);padding:1px 5px;border-radius:3px}
+.md .katex-display{overflow-x:auto;overflow-y:hidden;padding:3px 0}
+.fiche,.exo{border:1px solid var(--line);border-radius:6px;padding:16px 18px;margin-bottom:16px;background:var(--surface)}
+.fiche>header,.exo>header{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:flex-start;margin-bottom:6px}
+.exo{border-left:5px solid var(--line)}
+.exo.status-ok{border-left-color:var(--ok)}.exo.status-partial{border-left-color:var(--warn)}.exo.status-ko{border-left-color:var(--bad)}
+.corr{background:var(--soft);border-radius:5px;padding:4px 16px 10px;margin:12px 0}
+.fb{background:var(--soft);border-radius:5px;padding:4px 16px 10px;margin-top:10px}
+
+/* sessions cartes / qcm */
+.qa{border:1px solid var(--line);border-left:5px solid var(--c);border-radius:6px;padding:16px 18px;margin-bottom:16px}
+.qa .q{font-weight:600;margin-bottom:8px}
+.sess{max-width:720px;margin:0 auto}
+.sesshead{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;color:var(--ink2)}
+.flash{min-height:250px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;border:1px solid var(--line);border-top:6px solid var(--c);border-radius:8px;padding:26px;cursor:pointer;background:var(--surface);margin-bottom:14px;box-shadow:0 1px 0 var(--line),0 6px 0 -3px var(--soft);transition:transform .15s ease}
+.flash:hover{transform:rotate(-.4deg)}
+.flash small{color:var(--ink2);margin-bottom:10px}
+.flash .md{font-size:19px;text-align:center}
+.rates{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.qtext{font-size:18px;margin:6px 0 16px}
+.choice{display:flex;gap:12px;width:100%;text-align:left;padding:11px 14px;margin-bottom:9px;background:var(--surface);border:1px solid var(--line);border-radius:6px;cursor:pointer;align-items:flex-start}
+.choice:hover:not([disabled]){border-color:var(--ink2);transform:translateX(2px)}
+.choice{transition:transform .12s ease}
+.choice .k{flex:0 0 26px;height:26px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-weight:600;font-size:13px}
+.choice.ok{background:var(--okbg);border-color:var(--ok)}
+.choice.no{background:var(--badbg);border-color:var(--bad)}
+.choice[disabled]{cursor:default}
+.choice[disabled]:not(.ok):not(.no){opacity:.55}
+.expl{background:var(--soft);border-radius:5px;padding:4px 16px 10px;margin:12px 0}
+.list{display:grid;gap:8px;margin-top:8px}
+.item{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center;border:1px solid var(--line);border-radius:5px;padding:10px 14px}
+.stats{display:flex;gap:22px;flex-wrap:wrap;margin:0 0 14px}
+.stats div b{font:700 24px var(--f-head);display:block}
+
+/* progression */
+.tw{overflow-x:auto}
+table.prog{border-collapse:collapse;width:100%}
+table.prog th{text-align:left;font-weight:600;color:var(--ink2);padding:6px 10px;border-bottom:1px solid var(--line)}
+table.prog td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:middle}
+table.prog td.g{min-width:140px}
+details{margin-top:16px}summary{cursor:pointer;font-weight:500}
+.set{margin-top:28px;padding-top:16px;border-top:1px solid var(--line)}
+.field{display:grid;gap:4px;margin-bottom:14px;max-width:560px}
+.field label{font-weight:600}
+
+/* semestres & gestion */
+.sems{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 12px}
+.pill{border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:4px 13px;cursor:pointer;color:var(--ink2);font-size:14px}
+.pill:hover{border-color:var(--ink2)}
+.pill.on{background:var(--ink);color:var(--surface);border-color:var(--ink);font-weight:600}
+.mrow{display:flex;gap:10px;flex-wrap:wrap;align-items:center;border:1px solid var(--line);border-left:6px solid var(--c);border-radius:5px;padding:8px 12px;margin-bottom:8px}
+.mrow .grow{flex:1 1 200px}
+.mrow input[type=color]{padding:0;width:38px;height:34px;cursor:pointer}
+button[disabled].btn{opacity:.4;cursor:default}
+/* infos système */
+#busy{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:var(--ink);color:var(--surface);padding:10px 18px;border-radius:99px;display:flex;gap:10px;align-items:center;z-index:50;box-shadow:0 4px 18px rgba(0,0,0,.25)}
+#busy[hidden]{display:none}
+.spin{width:14px;height:14px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:sp .8s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+#toast{position:fixed;right:14px;bottom:14px;display:grid;gap:8px;z-index:60;max-width:min(420px,calc(100vw - 28px))}
+.t{padding:10px 14px;border-radius:6px;background:var(--ink);color:var(--surface);font-size:15px}
+.t.bad{background:var(--bad);color:#fff}
+@media (max-width:820px){
+  .split{grid-template-columns:1fr}
+  .subrow{grid-template-columns:1fr auto;}
+  .subrow .gauge{grid-column:1/-1;order:3}
+  .pane,.dash,.subhead{padding-left:14px;padding-right:14px}.subnav{padding-left:14px}
+  h1{font-size:25px}
+}
+@media (prefers-reduced-motion:reduce){.spin{animation-duration:2s}.btn,.flash,.choice{transition:none!important}.btn:hover,.flash:hover,.choice:hover{transform:none!important}}
+@media print{
+  body.printing *{visibility:hidden}
+  body.printing .print-target,body.printing .print-target *{visibility:visible}
+  body.printing .print-target{position:absolute;left:0;top:0;width:100%;border:0}
+  body.printing{background:#fff;color:#000}
+  .noprint{display:none!important}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand"><svg class="mark" width="30" height="30" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><polygon points="50,16 88,41 50,66 12,41" fill="currentColor"/><rect x="33" y="57" width="34" height="17" rx="7" fill="currentColor"/><line x1="88" y1="41" x2="88" y2="67" stroke="var(--hl)" stroke-width="5" stroke-linecap="round"/><circle cx="88" cy="72" r="6.5" fill="var(--hl)"/></svg><span class="hl">Révis GEII</span><small>mon atelier de révision</small></div>
+  <div id="sems" class="sems" aria-label="Semestres"></div>
+  <nav id="tabs" class="tabs" aria-label="Matières"></nav>
+  <div class="sheet"><main id="main"></main></div>
+</div>
+<div id="busy" hidden role="status"><i class="spin"></i><span></span></div>
+<div id="toast" aria-live="polite"></div>
+
+<script>
+'use strict';
+/* ============================== Données ============================== */
+const KEY='geii-revision-v1';
+const COLORS=['#2F6FED','#E4572E','#17A398','#8E5BD9','#D99A00','#D6336C','#3F8F3F','#5C6B7A'];
+const KINDS={cours:'Cours',td:'TD / TP',annale:'Annale / DS',exo:'Exercices'};
+const TARGET=0.85;
+const MODELS=['openai/gpt-oss-120b','openai/gpt-oss-20b','qwen/qwen3.8-27b'];
+const VISION_MODEL='qwen/qwen3.8-27b';
+const uid=()=>Math.random().toString(36).slice(2,9)+Date.now().toString(36).slice(-3);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const $=(s,r=document)=>r.querySelector(s);
+const words=t=>(String(t||'').trim().match(/\S+/g)||[]).length;
+const isChapter=d=>d.kind==='cours'||d.kind==='td';
+const pct=m=>Math.round(Math.max(0,Math.min(1,m))*100);
+
+function newSubject(name,i){return{id:uid(),name,color:COLORS[i%COLORS.length],examDate:'',semesterId:'',hidden:false,docs:[],fiches:[],cards:[],quizzes:[],exercises:[],explanations:[],log:[],self:{},wrongQ:[],plan:''};}
+function defaultState(){
+  const sem=[1,2,3,4,5,6].map(n=>({id:uid(),name:'Semestre '+n}));
+  return{v:4,settings:{apiKeys:[''],keyIdx:0,keyMeta:{},model:MODELS[0],visionModel:VISION_MODEL,maxChars:9000,lastExport:0},semesters:sem,
+    subjects:['Électronique analogique','Électronique numérique','Automatisme','Électrotechnique','Mathématiques','Programmation'].map((n,i)=>({...newSubject(n,i),semesterId:sem[0].id})),
+    ui:{tab:'dash',sub:'cours',sem:'all'}};}
+function migrate(s){const d=defaultState();s.settings=Object.assign(d.settings,s.settings||{});s.ui=Object.assign(d.ui,s.ui||{});
+  if((!Array.isArray(s.settings.apiKeys)||!s.settings.apiKeys.filter(k=>k&&k.trim()).length)&&s.settings.apiKey&&s.settings.apiKey.trim())s.settings.apiKeys=[s.settings.apiKey];
+  if(!Array.isArray(s.settings.apiKeys)||!s.settings.apiKeys.length)s.settings.apiKeys=[''];
+  delete s.settings.apiKey;if(!Number.isInteger(s.settings.keyIdx))s.settings.keyIdx=0;
+  if(!s.settings.keyMeta||typeof s.settings.keyMeta!=='object')s.settings.keyMeta={};
+  if(!s.settings.visionModel)s.settings.visionModel=VISION_MODEL;
+  if(['llama-3.3-70b-versatile','llama-3.1-8b-instant','qwen/qwen3-32b','meta-llama/llama-4-scout-17b-16e-instruct','meta-llama/llama-4-maverick-17b-128e-instruct','moonshotai/kimi-k2-instruct-0905','qwen/qwen3.6-27b'].includes(s.settings.model))s.settings.model=MODELS[0];
+  if(!Array.isArray(s.semesters)||!s.semesters.length)s.semesters=d.semesters;
+  s.subjects=(s.subjects||[]).map((x,i)=>Object.assign(newSubject(x.name||'Matière',i),x));s.subjects.forEach(x=>{if(!Array.isArray(x.explanations))x.explanations=[];x.hidden=!!x.hidden;});
+  const ids=new Set(s.semesters.map(x=>x.id));
+  s.subjects.forEach(x=>{if(!ids.has(x.semesterId))x.semesterId=s.semesters[0].id;});
+  if(s.ui.sem!=='all'&&!ids.has(s.ui.sem))s.ui.sem='all';return s;}
+function load(){try{const r=localStorage.getItem(KEY);if(r)return migrate(JSON.parse(r));}catch(e){console.warn(e)}return defaultState();}
+let S=load();
+let saveT;
+function save(){clearTimeout(saveT);saveT=setTimeout(()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){toast('Sauvegarde impossible (stockage plein ou bloqué). Exporte tes données dans Réglages.','bad')}},250);}
+
+/* état temporaire (non sauvegardé) */
+const T={docId:{},busy:null,qs:null,cs:null,open:new Set(),edit:new Set(),showParts:false,opts:{},answers:{},exFilter:'all',oneEx:null,models:null,showKeys:false,keyReveal:new Set()};
+const curSubject=()=>S.subjects.find(s=>s.id===S.ui.tab);
+const curDoc=()=>{const s=curSubject();return s&&s.docs.find(d=>d.id===T.docId[s.id]);};
+const visibleSubjects=()=>{const l=S.ui.sem==='all'?S.subjects:S.subjects.filter(s=>s.semesterId===S.ui.sem);return l;};
+const tabSubjects=()=>visibleSubjects().filter(s=>!s.hidden);
+const semName=id=>(S.semesters.find(x=>x.id===id)||{}).name||'';
+const semOptions=v=>S.semesters.map(x=>`<option value="${x.id}" ${x.id===v?'selected':''}>${esc(x.name)}</option>`).join('');
+
+/* ============================== Utilitaires ============================== */
+function toast(msg,type='ok'){const el=document.createElement('div');el.className='t '+type;el.textContent=msg;$('#toast').appendChild(el);setTimeout(()=>el.remove(),type==='bad'?8000:2800);}
+function setBusy(label){T.busy=label;const b=$('#busy');b.hidden=!label;$('span',b).textContent=label||'';}
+async function withAI(label,fn){if(T.busy)return;setBusy(label);try{await fn();}catch(e){console.error(e);toast(e.message||String(e),'bad');}finally{setBusy(null);render();}}
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function fmtH(h){if(h<=0.02)return '0 min';if(h<1)return Math.max(5,Math.round(h*12)*5)+' min';return (Math.round(h*2)/2).toString().replace('.',',')+' h';}
+function daysLeft(s){if(!s.examDate)return null;return Math.ceil((new Date(s.examDate+'T23:59:59')-Date.now())/864e5);}
+function fmtDate(d){try{return new Date(d+'T12:00:00').toLocaleDateString('fr-FR',{day:'numeric',month:'long'})}catch{return d}}
+function download(name,text,type='application/json'){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type}));a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),2000);}
+
+/* Markdown + LaTeX (KaTeX). Les formules sont extraites avant le Markdown pour ne pas être abîmées. */
+if(window.marked){marked.setOptions({breaks:true,gfm:true});marked.use({renderer:{html(h){return esc(h)}}});}
+function renderMD(src){
+  const maths=[];
+  const t=String(src||'').replace(/\$\$([\s\S]+?)\$\$|\\\[([\s\S]+?)\\\]|\\\(([\s\S]+?)\\\)|\$([^\n$]+?)\$/g,(m,a,b,c,d)=>{
+    const disp=a!==undefined||b!==undefined;maths.push({tex:(a??b??c??d).trim(),disp});return '@@M'+(maths.length-1)+'@@';});
+  let html=window.marked?marked.parse(t):esc(t).replace(/\n/g,'<br>');
+  return html.replace(/@@M(\d+)@@/g,(m,i)=>{const {tex,disp}=maths[i];
+    try{if(window.katex)return katex.renderToString(tex,{displayMode:disp,throwOnError:false});}catch(e){}
+    return esc(disp?'$$'+tex+'$$':'$'+tex+'$');});
+}
+const md=s=>`<div class="md">${renderMD(s)}</div>`;
+
+/* ============================== IA (Groq) ============================== */
+const GROQ='https://api.groq.com/openai/v1';
+const apiKeys=()=>(S.settings.apiKeys||[]).map(k=>(k||'').trim()).filter(Boolean);
+const hasKey=()=>apiKeys().length>0;
+function captureQuota(idx,r){
+  try{
+    const g=n=>r.headers&&r.headers.get?r.headers.get(n):null;
+    const remReq=g('x-ratelimit-remaining-requests'),remTok=g('x-ratelimit-remaining-tokens');
+    if(remReq==null&&remTok==null)return;
+    S.settings.keyMeta=S.settings.keyMeta||{};
+    S.settings.keyMeta[idx]={remReq,remTok,limReq:g('x-ratelimit-limit-requests'),limTok:g('x-ratelimit-limit-tokens'),resetTok:g('x-ratelimit-reset-tokens'),t:Date.now()};
+    save();
+  }catch(e){}
+}
+async function callOnce(key,messages,useJson,temperature,max,model,idx){
+  const body={model:model||S.settings.model,messages,temperature,max_tokens:max};
+  if(useJson)body.response_format={type:'json_object'};
+  let r;
+  try{r=await fetch(GROQ+'/chat/completions',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+key},body:JSON.stringify(body)});}
+  catch(e){const err=new Error('Impossible de joindre Groq. Vérifie ta connexion internet.');err.network=true;throw err;}
+  if(idx!=null)captureQuota(idx,r);
+  if(!r.ok){
+    let raw=await r.text(),msg=raw,failed='';
+    try{const j=JSON.parse(raw);msg=j.error?.message||raw;failed=j.error?.failed_generation||'';}catch{}
+    const err=new Error(`Groq (${r.status}) : ${msg}`);err.status=r.status;err.failed=failed;throw err;
+  }
+  const d=await r.json();return d.choices?.[0]?.message?.content||'';
+}
+function keyOrder(keys){
+  const meta=S.settings.keyMeta||{},start=S.settings.keyIdx||0;
+  return keys.map((k,i)=>i).sort((a,b)=>{
+    const ra=meta[a]&&meta[a].remTok!=null?+meta[a].remTok:Infinity,rb=meta[b]&&meta[b].remTok!=null?+meta[b].remTok:Infinity;
+    if(ra!==rb)return rb-ra;
+    return (b===start?1:0)-(a===start?1:0);
+  });
+}
+async function ai(messages,{json=false,temperature=.4,max=3000,model=null}={}){
+  const keys=apiKeys();
+  if(!keys.length)throw new Error('Ajoute au moins une clé API Groq dans Réglages.');
+  const order=keyOrder(keys);
+  let lastErr=null;
+  for(let i=0;i<order.length;i++){
+    const idx=order[i],key=keys[idx];
+    try{
+      let out;
+      try{out=await callOnce(key,messages,json,temperature,max,model,idx);}
+      catch(e){
+        if(json&&e.status===400){out=e.failed?e.failed:await callOnce(key,messages,false,temperature,max,model,idx);}
+        else throw e;
+      }
+      if(idx!==S.settings.keyIdx){S.settings.keyIdx=idx;save();}
+      return out;
+    }catch(e){
+      lastErr=e;
+      if(e.status===401||e.status===403||e.status===429){
+        if(i<order.length-1)toast(`Clé ${idx+1} indisponible (${e.status===429?'limite atteinte':'invalide'}), relais sur la clé suivante…`,'bad');
+        continue;
+      }
+      let hint='';
+      if(e.status===413)hint=' → Texte trop long : réduis la taille maximale dans Réglages.';
+      throw new Error(e.message+hint);
+    }
+  }
+  const hint=lastErr&&lastErr.status===429?' Attends un peu ou ajoute une autre clé dans Réglages.':lastErr&&lastErr.network?' Vérifie ta connexion internet.':' Vérifie tes clés dans Réglages.';
+  throw new Error((keys.length>1?'Toutes tes clés API sont indisponibles.':'Ta clé API est indisponible.')+hint);
+}
+/* Réparation des antislashs LaTeX dans le JSON renvoyé par l'IA (\frac, \text, \beta… sont des échappements JSON valides mais faux) */
+const LATEX_WORDS=new Set(['frac','tfrac','forall','flat','frown','text','textbf','textit','times','theta','tau','tan','tanh','to','top','triangle','tilde','therefore','beta','bar','begin','binom','big','bigg','boldsymbol','bullet','because','nu','neq','ne','ni','nabla','not','notin','nmid','ncong','newline','rho','right','rightarrow','rangle','rfloor','rceil','rm']);
+function fixEsc(t){let o='';for(let i=0;i<t.length;i++){const c=t[i];if(c!=='\\'){o+=c;continue;}const n=t[i+1];
+  if(n==='\\'||n==='"'||n==='/'){o+=c+n;i++;continue;}
+  if(n==='u'&&/^[0-9a-fA-F]{4}/.test(t.slice(i+2,i+6))){o+=c;continue;}
+  if(n&&'bfnrt'.includes(n)){const w=(t.slice(i+1).match(/^[A-Za-z]+/)||[''])[0];if(!LATEX_WORDS.has(w)){o+=c;continue;}}
+  o+='\\\\';}return o;}
+function parseJSON(t){t=String(t).trim().replace(/^```(?:json)?/i,'').replace(/```$/,'').trim();
+  const tryP=x=>JSON.parse(fixEsc(x));
+  try{return tryP(t);}catch(e){const a=t.indexOf('{'),b=t.lastIndexOf('}');if(a>=0&&b>a){try{return tryP(t.slice(a,b+1));}catch{}}}
+  throw new Error('La réponse de l’IA est illisible. Réessaie (ou choisis un modèle plus gros dans Réglages).');}
+const JSON_NOTE='Réponds UNIQUEMENT avec un objet JSON valide, sans texte autour. Dans le JSON, double chaque antislash des formules LaTeX (écris \\\\frac, \\\\Omega, \\\\text).';
+const sys=s=>`Tu es un enseignant-tuteur de BUT GEII (Génie Électrique et Informatique Industrielle) en France. Matière : « ${s.name} ». Tu écris en français, avec rigueur (unités SI, notations françaises usuelles). Toute formule est écrite en LaTeX : $...$ en ligne, $$...$$ en bloc. Tu t'appuies d'abord sur le cours fourni et tu ne le contredis pas.`;
+
+/* Sources : budget de caractères réparti entre les documents */
+function budget(list){
+  let rem=S.settings.maxChars,left=list.length,trunc=false;const lim=[];
+  list.map((x,i)=>i).sort((a,b)=>list[a].text.length-list[b].text.length).forEach(i=>{const use=Math.min(list[i].text.length,Math.floor(rem/left));lim[i]=use;rem-=use;left--;});
+  return{sources:list.map((x,i)=>{if(x.text.length>lim[i])trunc=true;return{...x,text:x.text.slice(0,lim[i])};}),trunc};
+}
+function sourcesFor(s,val){
+  let docs;
+  if(val==='all'){docs=s.docs.filter(isChapter);if(!docs.length)docs=s.docs;}else docs=s.docs.filter(d=>d.id===val);
+  docs=docs.filter(d=>words(d.content)>5);
+  if(!docs.length)throw new Error('Ajoute d’abord du contenu dans l’onglet Cours.');
+  return budget(docs.map(d=>({id:d.id,title:d.title||'Sans titre',text:d.content})));
+}
+const srcText=src=>src.length===1?`(${src[0].title})\n${src[0].text}`:src.map((x,i)=>`### DOCUMENT ${i+1} : ${x.title}\n${x.text}`).join('\n\n');
+const docNote=src=>src.length>1?'Chaque élément porte un champ "doc" = numéro du DOCUMENT dont il provient.':'Mets "doc":1 dans chaque élément.';
+const docOf=(src,n)=>src.length===1?src[0].id:(src[(parseInt(n)||0)-1]?.id??null);
+const truncNote=src=>{if(src.trunc)toast(`Texte tronqué à ${S.settings.maxChars} caractères (modifiable dans Réglages).`);};
+
+/* ============================== Générateurs ============================== */
+const QCM_LEVELS=[['facile','Facile'],['moyen','Moyen'],['difficile','Difficile (type DS)'],['tresdur','Très difficile (type examen final)'],['expert','Expert (niveau concours)'],['mélangé','Mélangé, du facile au très difficile']];
+const QCM_DIFF={facile:'facile, questions directes de cours',moyen:'moyen, niveau TD',difficile:'difficile, niveau DS : petits calculs et pièges classiques',tresdur:'très difficile, niveau examen final : raisonnement en plusieurs étapes, peu d’indices',expert:'niveau expert / concours : questions qui combinent plusieurs notions, distracteurs très proches de la bonne réponse, exige une maîtrise fine',"mélangé":'mélangé : du facile au très difficile, en montant progressivement en niveau'};
+const EX_LEVELS=[['plusfacile','Plus facile'],['comme l’original','Même niveau'],['plusdur','Plus difficile'],['examen','Niveau examen final'],['expert','Expert (niveau concours)']];
+const EX_DIFF={plusfacile:'un peu plus facile que l’original, pour s’échauffer',"comme l’original":'du même niveau que l’original',plusdur:'plus difficile que l’original, avec une étape ou une subtilité en plus',examen:'difficile, niveau examen final : plusieurs notions combinées, peu de guidage, valeurs numériques moins immédiates',expert:'très difficile, niveau expert ou concours : raisonnement à plusieurs étapes, pièges, peu d’indications, proche de ce qui se fait en classe préparatoire'};
+async function makeFiche(s,src,type){
+  const P={
+    complete:`Rédige une fiche de révision structurée en Markdown contenant, dans cet ordre :\n## L'essentiel (5 à 8 lignes)\n## Définitions et notions clés\n## Formules à connaître (chaque formule en LaTeX, avec le sens de chaque symbole, son unité et ses conditions de validité)\n## Méthodes types (démarche pas à pas pour les exercices classiques)\n## Pièges et erreurs fréquentes\n## Mini-exemple résolu (avec un calcul numérique)\nReste dense et concis, pour une relecture la veille d'une évaluation. Pas d'introduction.`,
+    formulaire:`Rédige un formulaire en Markdown : UNIQUEMENT les formules, lois, théorèmes et relations importantes, regroupés par thème (## titres). Pour chaque formule : l'expression en LaTeX, la signification des symboles avec leurs unités, et les conditions de validité si elles existent. Pas de phrases inutiles.`,
+    express:`Rédige un résumé express en Markdown : 10 lignes maximum d'essentiel, puis « ## Les 5 formules à retenir » (LaTeX), puis « ## Le piège n°1 ».`};
+  const labels={complete:'Fiche complète',formulaire:'Formulaire',express:'Résumé express'};
+  const out=await ai([{role:'system',content:sys(s)},{role:'user',content:`${P[type]}\n\n=== COURS ===\n${srcText(src.sources)}`}],{max:3000,temperature:.3});
+  s.fiches.unshift({id:uid(),docId:src.sources.length===1?src.sources[0].id:null,title:(src.sources.length===1?src.sources[0].title:'Toute la matière')+' – '+labels[type],md:out.trim(),createdAt:Date.now()});
+  save();truncNote(src);toast('Fiche créée.');S.ui.sub='fiches';
+}
+async function makeCards(s,src,n){
+  const out=await ai([{role:'system',content:sys(s)},{role:'user',content:`Crée ${n} cartes de révision (recto/verso) à partir du cours. Recto : une question courte, une notion à définir, ou « Donne l'expression de… ». Verso : la réponse concise, formules en LaTeX. Couvre tout le cours, de l'essentiel au plus subtil. ${docNote(src.sources)}\nFormat : {"cards":[{"doc":1,"front":"...","back":"..."}]}\n${JSON_NOTE}\n\n=== COURS ===\n${srcText(src.sources)}`}],{json:true,max:3000,temperature:.4});
+  const list=(parseJSON(out).cards||[]).filter(c=>c&&c.front&&c.back);
+  if(!list.length)throw new Error('Aucune carte reçue. Réessaie.');
+  const have=new Set(s.cards.map(c=>c.front.trim().toLowerCase()));let k=0;
+  for(const c of list){if(have.has(String(c.front).trim().toLowerCase()))continue;s.cards.push({id:uid(),docId:docOf(src.sources,c.doc),front:String(c.front),back:String(c.back),box:0,due:0});k++;}
+  save();truncNote(src);toast(`${k} carte(s) ajoutée(s).`);S.ui.sub='cartes';
+}
+async function makeQcm(s,src,n,diff){
+  const out=await ai([{role:'system',content:sys(s)},{role:'user',content:`Crée un QCM de ${n} questions, niveau ${QCM_DIFF[diff]||diff}, à 4 propositions dont UNE seule correcte. Mélange questions de cours, de raisonnement et petits calculs numériques (valeurs et unités). Les mauvaises réponses doivent être plausibles (erreurs classiques). Ajoute pour chaque question une explication courte de la bonne réponse. ${docNote(src.sources)}\nFormat : {"questions":[{"doc":1,"q":"...","choices":["...","...","...","..."],"answer":0,"explanation":"..."}]} où answer est l'indice (0 à 3) de la bonne réponse.\n${JSON_NOTE}\n\n=== COURS ===\n${srcText(src.sources)}`}],{json:true,max:3500,temperature:.5});
+  const qs=(parseJSON(out).questions||[]).filter(q=>q&&q.q&&Array.isArray(q.choices)&&q.choices.length>=2&&Number.isInteger(q.answer)&&q.answer>=0&&q.answer<q.choices.length)
+    .map(q=>{const ch=q.choices.slice(0,4).map(c=>String(c).replace(/^\s*[A-Da-d][.)]\s+/,''));const idx=shuffle(ch.map((_,i)=>i));
+      return{q:String(q.q),choices:idx.map(i=>ch[i]),answer:idx.indexOf(Math.min(q.answer,ch.length-1)),explanation:String(q.explanation||''),docId:docOf(src.sources,q.doc)};});
+  if(!qs.length)throw new Error('Aucune question exploitable reçue. Réessaie.');
+  s.quizzes.unshift({id:uid(),title:(src.sources.length===1?src.sources[0].title:'Toute la matière')+' ('+qs.length+' questions)',createdAt:Date.now(),questions:qs,attempts:[]});
+  save();truncNote(src);toast('QCM créé.');S.ui.sub='qcm';
+}
+async function makeExos(s,src,mode,n,diff){
+  const task=mode==='extract'
+    ?`Repère dans le texte les exercices, problèmes et questions de TD complets. Recopie chaque énoncé fidèlement (données numériques et sous-questions comprises), puis rédige une correction détaillée étape par étape (reprends celle du texte si elle existe). Si le texte ne contient aucun exercice, renvoie une liste vide.`
+    :`Le texte ci-dessous sert de modèle (cours, TD ou annale). Crée ${n} NOUVEAUX exercices du même type, de même structure et de même niveau (${EX_DIFF[diff]||diff}), avec d'autres valeurs numériques et d'autres situations. Chaque exercice : un énoncé complet avec sous-questions a), b), c)… (valeurs et unités), puis une correction détaillée étape par étape, avec formules et résultats numériques vérifiés.`;
+  const out=await ai([{role:'system',content:sys(s)},{role:'user',content:`${task} ${docNote(src.sources)}\nFormat : {"exercises":[{"doc":1,"title":"...","statement":"...","correction":"..."}]}\n${JSON_NOTE}\n\n=== TEXTE ===\n${srcText(src.sources)}`}],{json:true,max:4500,temperature:mode==='extract'?.2:.6});
+  const ex=(parseJSON(out).exercises||[]).filter(e=>e&&e.statement);
+  if(!ex.length)throw new Error(mode==='extract'?'Aucun exercice détecté dans ce document.':'Aucun exercice reçu. Réessaie.');
+  ex.forEach(e=>s.exercises.unshift({id:uid(),docId:docOf(src.sources,e.doc),title:String(e.title||'Exercice'),statement:String(e.statement),correction:String(e.correction||'(pas de correction fournie)'),source:mode==='extract'?'extrait':'généré',difficulty:diff||'',status:null,createdAt:Date.now()}));
+  save();truncNote(src);toast(`${ex.length} exercice(s) ajouté(s).`);S.ui.sub='exos';
+}
+
+/* Découpage d'un cours en parties */
+function splitSections(text){
+  const isHead=l=>{const t=l.trim();if(!t||t.length>90)return false;return /^#{1,4}\s+\S/.test(t)||/^\d+(\.\d+)*[.)]?\s+[A-ZÉÈÀÂÊÎÔÛ]/.test(t)||/^(chapitre|partie|section)\b/i.test(t);};
+  const secs=[];let cur={title:'Début',lines:[]};
+  for(const l of String(text||'').split('\n')){if(isHead(l)){if(cur.lines.join('').trim())secs.push(cur);cur={title:l.replace(/^\s*#+\s*/,'').trim().slice(0,80),lines:[l]};}else cur.lines.push(l);}
+  if(cur.lines.join('').trim())secs.push(cur);
+  const out=[];for(const x of secs.map(x=>({title:x.title,text:x.lines.join('\n').trim()}))){if(out.length&&words(x.text)<25)out[out.length-1].text+='\n\n'+x.text;else out.push(x);}
+  if(out.length<2&&words(text)>300){
+    const paras=String(text).split(/\n\s*\n/);const chunks=[];let buf=[],w=0;
+    for(const p of paras){buf.push(p);w+=words(p);if(w>=250){chunks.push(buf.join('\n\n'));buf=[];w=0;}}
+    if(buf.length)chunks.push(buf.join('\n\n'));
+    return chunks.map((c,i)=>({title:'Partie '+(i+1)+' – '+c.trim().split('\n')[0].slice(0,50),text:c}));
+  }
+  return out;
+}
+
+/* ============================== Progression & estimation ============================== */
+function docMastery(s,d){
+  const ch=new Set(s.docs.filter(isChapter).map(x=>x.id)),now=Date.now();let num=0,den=0,n=0;
+  for(const e of s.log){let w;if(e.docId===d.id){w=1;n++;}else if(!e.docId||!ch.has(e.docId))w=.3;else continue;
+    w*=Math.pow(.5,(now-e.t)/(14*864e5));num+=e.ok*w;den+=w;}
+  const self=s.self[d.id],prior=self?.1+(self-1)*.2:.25,pw=self?1.5:1;
+  return{m:(num+prior*pw)/(den+pw),n,conf:Math.min(1,n/10)};
+}
+const baseHours=d=>Math.min(5,Math.max(.5,.5+words(d.content)/1000));
+function estimateSubject(s){
+  const rows=s.docs.filter(d=>isChapter(d)&&words(d.content)>20).map(d=>{const mm=docMastery(s,d),base=baseHours(d);return{d,...mm,base,need:base*Math.max(0,(TARGET-mm.m)/TARGET)};});
+  const total=rows.reduce((a,r)=>a+r.need,0),tb=rows.reduce((a,r)=>a+r.base,0);
+  const days=daysLeft(s);
+  return{rows,total,tb,mastery:tb?rows.reduce((a,r)=>a+r.m*r.base,0)/tb:0,conf:rows.length?rows.reduce((a,r)=>a+r.conf,0)/rows.length:0,days,perDay:days!=null&&days>0?total/days:null};
+}
+function logEntry(s,kind,docId,ok){s.log.push({t:Date.now(),kind,docId:docId||null,ok});if(s.log.length>3000)s.log=s.log.slice(-3000);}
+function todoList(){
+  const out=[];
+  for(const s of visibleSubjects()){const e=estimateSubject(s);for(const r of e.rows){const urg=e.days!=null&&e.days>=0?1+10/(e.days+2):1;out.push({s,r,score:r.need*urg});}}
+  return out.sort((a,b)=>b.score-a.score).filter(x=>x.r.need>.05).slice(0,4).map(({s,r})=>{
+    let msg,sub;
+    if(r.n===0){msg='Pas encore travaillé : génère une fiche puis un QCM';sub='fiches';}
+    else if(r.m<.55){msg='Encore fragile : refais un QCM ou des exercices';sub='qcm';}
+    else{msg='Presque prêt : consolide avec les cartes';sub='cartes';}
+    return{s,d:r.d,msg,sub,h:r.need};});
+}
+
+/* ============================== Vues ============================== */
+const gauge=(m)=>`<div class="gauge" style="--v:${pct(m)}%" title="Niveau estimé ${pct(m)} % – objectif 85 %"><i></i><b></b></div>`;
+const empty=(t,p,btn='')=>`<div class="empty"><h3>${t}</h3><p>${p}</p>${btn}</div>`;
+const keyHint=()=>hasKey()?'':`<p class="hint">Pour générer avec l’IA, il faut une clé Groq. <button class="link" data-act="tab" data-id="settings">Ouvrir les réglages</button></p>`;
+function examChip(s){const d=daysLeft(s);if(d==null)return '';
+  if(d<0)return `<span class="chip">Évaluation passée</span>`;
+  return `<span class="chip ${d<=7?'warn':''}">Évaluation ${d===0?'aujourd’hui':'dans '+d+' j'} (${fmtDate(s.examDate)})</span>`;}
+function optSelect(k,opts,def){const v=T.opts[k]??def;return `<select data-chg="opt" data-k="${k}">${opts.map(([val,lab])=>`<option value="${esc(val)}" ${String(val)===String(v)?'selected':''}>${esc(lab)}</option>`).join('')}</select>`;}
+function getSrc(s,name){const v=T.opts[name+s.id];if(v==='all'&&s.docs.length>1)return 'all';if(s.docs.some(d=>d.id===v))return v;return s.docs.length>1?'all':(s.docs[0]?.id||'all');}
+function srcSelect(s,name){const k=name+s.id,v=getSrc(s,name);
+  return `<select data-chg="opt" data-k="${k}" aria-label="Source">${s.docs.length>1?`<option value="all" ${v==='all'?'selected':''}>Tous les cours de la matière</option>`:''}${s.docs.map(d=>`<option value="${d.id}" ${v===d.id?'selected':''}>${esc(d.title||'Sans titre')} (${KINDS[d.kind]})</option>`).join('')}</select>`;}
+const noDocs=s=>s.docs.length?'':empty('Commence par ajouter un cours','Colle le texte de ton cours (ou importe un fichier) : tout le reste s’appuie dessus.',`<button class="btn pri" data-act="sub" data-id="cours">Aller à l’onglet Cours</button>`);
+
+function viewDash(){
+  const rows=visibleSubjects().map(s=>({s,e:estimateSubject(s)}));
+  const totalH=rows.reduce((a,r)=>a+r.e.total,0),nCh=rows.reduce((a,r)=>a+r.e.rows.length,0);
+  const next=rows.filter(r=>r.e.days!=null&&r.e.days>=0).sort((a,b)=>a.e.days-b.e.days)[0];
+  const todo=todoList();
+  const first=!S.subjects.some(s=>s.docs.length);
+  const tbAll=rows.reduce((a,r)=>a+r.e.tb,0),globalPct=tbAll?pct(rows.reduce((a,r)=>a+r.e.mastery*r.e.tb,0)/tbAll):null;
+  return `<div class="dash">
+  <div class="row" style="align-items:baseline"><h1>Où j’en suis</h1>${S.ui.sem!=='all'?`<span class="chip">${esc(semName(S.ui.sem))}</span>`:''}</div>
+  <div class="grade">${globalPct!=null?`<div class="ring" title="Moyenne pondérée par la longueur de chaque chapitre"><b>${globalPct}%</b><span>niveau global</span></div>`:`<div class="ring off"><b>–</b><span>pas encore de données</span></div>`}
+  <p class="lead">${nCh?`Il me reste environ <mark>${fmtH(totalH)}</mark> de travail pour être prêt sur l’ensemble des matières.`:'Ajoute tes cours pour que j’estime le travail qu’il te reste.'}</p></div>
+  ${next?`<p class="muted">Prochaine évaluation : ${esc(next.s.name)}, ${next.e.days===0?'aujourd’hui':'dans '+next.e.days+' jour'+(next.e.days>1?'s':'')}${next.e.perDay!=null?` – soit ${fmtH(next.e.perDay)} de travail par jour d’ici là`:''}.</p>`:''}
+  ${!hasKey()?`<div class="banner"><span>Ajoute ta clé Groq pour activer la génération de fiches, cartes, QCM et exercices.</span><button class="btn" data-act="tab" data-id="settings">Ajouter ma clé</button></div>`:''}
+  ${(!first&&Date.now()-(S.settings.lastExport||0)>14*864e5)?`<div class="banner"><span>Tes données sont uniquement dans ce navigateur. Fais une sauvegarde pour ne rien perdre.</span><button class="btn" data-act="exportData">Exporter une sauvegarde</button></div>`:''}
+  ${first?`<h3 style="margin-top:22px">Pour démarrer</h3><ol class="steps"><li>Ouvre une matière et colle ton cours dans l’onglet Cours.</li><li>Génère une fiche : les formules sont rédigées en LaTeX.</li><li>Entraîne-toi avec les cartes, les QCM et les exercices : chaque résultat affine l’estimation du temps restant.</li></ol>`:''}
+  ${!rows.length?empty('Aucune matière ici','Ajoute ou déplace des matières dans l’onglet Gérer.','<button class="btn pri" data-act="tab" data-id="manage">Gérer mes matières</button>'):''}<ul class="subrows">${rows.map(({s,e})=>`<li class="subrow" style="--c:${s.color}">
+    <span><button class="name" data-act="go" data-id="${s.id}" data-sub="cours">${esc(s.name)}</button>${S.ui.sem==='all'?`<small class="muted" style="display:block;padding-left:15px">${esc(semName(s.semesterId))}</small>`:''}</span>
+    ${gauge(e.mastery)}<span class="num">${e.rows.length?pct(e.mastery)+' %':'–'}</span>
+    <span>${e.rows.length?fmtH(e.total)+' restantes':'<span class="muted">aucun cours</span>'}</span>
+    <span>${s.examDate?examChip(s):'<span class="muted">pas de date d’éval.</span>'}</span></li>`).join('')}</ul>
+  <p class="muted" style="font-size:14px;margin-top:8px">Le trait sur chaque jauge marque le niveau visé (85 %) pour aborder l’évaluation sereinement.</p>
+  ${todo.length?`<h2 style="margin-top:28px">À faire maintenant</h2><ul class="todo">${todo.map(t=>`<li style="--c:${t.s.color}"><span><b>${esc(t.s.name)}</b> – ${esc(t.d.title||'Sans titre')}<br><span class="muted">${t.msg} (environ ${fmtH(t.h)})</span></span><button class="btn sm" data-act="go" data-id="${t.s.id}" data-sub="${t.sub}">Ouvrir</button></li>`).join('')}</ul>`:''}
+  </div>`;
+}
+
+function viewSubject(s){
+  const subs=[['cours','Cours'],['fiches','Fiches'],['cartes','Cartes'],['qcm','QCM'],['exos','Exercices'],['explain','Explication'],['prog','Progression']];
+  const P={cours:paneCours,fiches:paneFiches,cartes:paneCartes,qcm:paneQcm,exos:paneExos,explain:paneExplain,prog:paneProg};
+  if(!P[S.ui.sub])S.ui.sub='cours';
+  return `<div class="subhead" style="--c:${s.color}"><h1>${esc(s.name)}</h1><span class="chip">${esc(semName(s.semesterId))}</span>${s.hidden?'<span class="chip warn">Onglet masqué</span>':''}${examChip(s)}</div>
+  <nav class="subnav">${subs.map(([k,l])=>`<button class="${S.ui.sub===k?'on':''}" data-act="sub" data-id="${k}">${l}</button>`).join('')}</nav>
+  <div class="pane" style="--c:${s.color}">${P[S.ui.sub](s)}</div>`;
+}
+
+/* --- Cours --- */
+function paneCours(s){
+  const cur=s.docs.find(d=>d.id===T.docId[s.id])||s.docs[0];if(cur)T.docId[s.id]=cur.id;
+  return `<div class="split"><aside class="doclist"><div class="row"><button class="btn pri" data-act="newDoc">Nouveau document</button>
+    <label class="btn">Importer<input type="file" hidden multiple accept=".txt,.md,.tex,.csv,.pdf,.png,.jpg,.jpeg,.webp" data-chg="importFile"></label></div>
+    <div class="row" style="margin-top:8px">${optSelect('ocrMode',[['garder','Photo/scan : tout garder'],['sansmanuscrit','Photo/scan : retirer l’écriture manuscrite'],['seulmanuscrit','Photo/scan : garder seulement le manuscrit']],'garder')}</div>
+    ${s.docs.length?'<ul>'+s.docs.map(d=>`<li><button class="doc ${cur&&cur.id===d.id?'on':''}" data-act="selDoc" data-id="${d.id}"><b>${esc(d.title||'Sans titre')}</b><small>${KINDS[d.kind]}, ${words(d.content)} mots${d.ocr?' · lu par IA, à relire':''}</small></button></li>`).join('')+'</ul>':'<p class="muted">Aucun document pour l’instant.</p>'}
+    <p class="muted" style="font-size:13px;margin-top:14px">Import : .txt, .md, .pdf, ou une photo/scan (.png, .jpg, .webp). Un PDF ou une photo sans texte numérique est lu automatiquement par l’IA (utile pour des notes manuscrites) : choisis ci-dessus ce qu’elle doit garder. C’est imparfait sur une écriture peu lisible : relis toujours le résultat.</p></aside>
+  <section class="editor">${cur?`<div class="row"><input class="title" value="${esc(cur.title)}" placeholder="Titre (ex. Chapitre 3 – Amplificateur opérationnel)" data-inp="docTitle" aria-label="Titre">
+    <select data-chg="docKind" aria-label="Type">${Object.entries(KINDS).map(([k,l])=>`<option value="${k}" ${cur.kind===k?'selected':''}>${l}</option>`).join('')}</select></div>
+    <textarea class="body" data-inp="docBody" placeholder="Colle ici ton cours. Les formules peuvent s’écrire en LaTeX : $R_{eq}=R_1+R_2$" aria-label="Contenu">${esc(cur.content)}</textarea>
+    <p class="muted" style="font-size:14px;margin:-4px 0 12px">Type « Annale / DS » ou « Exercices » : sert de modèle pour créer des exercices similaires, sans compter dans le temps de révision.</p>
+    <div class="row"><button class="btn" data-act="toggleParts">${T.showParts?'Masquer les parties':'Voir les parties'}</button><button class="btn red" data-act="delDoc">Supprimer</button></div>
+    ${T.showParts?partsView(cur):''}`:empty('Ajoute ton premier document','Colle un cours, un TD ou une annale, ou importe un fichier.')}</section></div>`;
+}
+function partsView(d){
+  const parts=splitSections(d.content);
+  if(!parts.length)return '<p class="muted">Rien à découper pour l’instant.</p>';
+  return `<h3 style="margin-top:20px">Réviser une partie précise</h3><ul class="parts">${parts.map((p,i)=>`<li><span><b>${esc(p.title)}</b> <span class="muted">${words(p.text)} mots</span></span>
+    <span class="row"><button class="btn sm" data-act="partGen" data-kind="fiche" data-i="${i}">Fiche</button><button class="btn sm" data-act="partGen" data-kind="qcm" data-i="${i}">QCM</button><button class="btn sm" data-act="partGen" data-kind="cards" data-i="${i}">Cartes</button></span></li>`).join('')}</ul>`;
+}
+
+/* --- Fiches --- */
+function paneFiches(s){
+  if(!s.docs.length)return noDocs(s);
+  return `<div class="gen"><h3>Créer une fiche à partir de mon cours</h3><div class="row">${srcSelect(s,'fiche')}
+    ${optSelect('ficheType',[['complete','Fiche complète'],['formulaire','Formulaire (formules seules)'],['express','Résumé express']],'complete')}
+    <button class="btn pri" data-act="genFiche">Générer la fiche</button></div>${keyHint()}</div>
+  ${s.fiches.length?s.fiches.map(f=>`<article class="fiche" id="fiche-${f.id}"><header><h3>${esc(f.title)}</h3><div class="row noprint">
+      <button class="btn sm" data-act="editFiche" data-id="${f.id}">${T.edit.has(f.id)?'Terminer':'Modifier'}</button>
+      <button class="btn sm" data-act="copyFiche" data-id="${f.id}">Copier</button>
+      <button class="btn sm" data-act="printFiche" data-id="${f.id}">Imprimer / PDF</button>
+      <button class="btn sm red" data-act="delFiche" data-id="${f.id}">Supprimer</button></div></header>
+    ${T.edit.has(f.id)?`<textarea rows="16" data-inp="ficheMd" data-id="${f.id}">${esc(f.md)}</textarea>`:md(f.md)}</article>`).join('')
+  :empty('Aucune fiche pour l’instant','Choisis un cours ci-dessus : l’IA en tire les définitions, les formules et les pièges à éviter.')}`;
+}
+
+/* --- Cartes --- */
+function paneCartes(s){
+  if(T.cs&&T.cs.sid===s.id)return cardSession(s);
+  if(!s.docs.length)return noDocs(s);
+  const due=s.cards.filter(c=>c.due<=Date.now()).length,mastered=s.cards.filter(c=>c.box>=4).length;
+  return `<div class="gen"><h3>Créer des cartes de révision</h3><div class="row">${srcSelect(s,'cards')}${optSelect('cardsN',[[10,'10 cartes'],[15,'15 cartes'],[20,'20 cartes'],[30,'30 cartes']],15)}
+    <button class="btn pri" data-act="genCards">Générer</button></div>${keyHint()}</div>
+  <div class="stats"><div><b>${s.cards.length}</b>cartes</div><div><b>${due}</b>à revoir aujourd’hui</div><div><b>${mastered}</b>bien maîtrisées</div></div>
+  <div class="row"><button class="btn pri" data-act="startCards" data-mode="due">Réviser ce qui est dû (${due})</button><button class="btn" data-act="startCards" data-mode="all">Tout réviser</button></div>
+  <div class="gen" style="margin-top:16px"><h3>Ajouter une carte à la main</h3><div class="row"><input id="nf" placeholder="Recto (question)" style="flex:1 1 220px"><input id="nb" placeholder="Verso (réponse)" style="flex:1 1 220px"><button class="btn" data-act="addCard">Ajouter</button></div></div>
+  ${s.cards.length?`<details><summary>Voir mes cartes (${s.cards.length})</summary><div class="list">${s.cards.slice(0,80).map(c=>`<div class="item"><span style="flex:1 1 300px"><b>${esc(c.front).slice(0,140)}</b><br><span class="muted">${esc(c.back).slice(0,140)}</span></span><span class="row"><span class="chip">Niveau ${c.box}/5</span><button class="btn sm red" data-act="delCard" data-id="${c.id}">Supprimer</button></span></div>`).join('')}${s.cards.length>80?'<p class="muted">… et '+(s.cards.length-80)+' autres.</p>':''}</div></details>`:''}`;
+}
+function cardSession(s){
+  const st=T.cs;
+  if(st.i>=st.ids.length)return `<div class="sess"><h2>Session terminée</h2><div class="stats" style="margin-top:14px"><div><b>${st.stats.know}</b>sues</div><div><b>${st.stats.almost}</b>presque</div><div><b>${st.stats.miss}</b>à revoir</div></div><button class="btn pri" data-act="endCards">Terminer</button></div>`;
+  const c=s.cards.find(x=>x.id===st.ids[st.i]);
+  if(!c){st.i++;return cardSession(s);}
+  return `<div class="sess"><div class="sesshead"><span>Carte ${st.i+1} sur ${st.ids.length}</span><button class="link" data-act="endCards">Quitter</button></div>
+  <div class="flash" data-act="flip" tabindex="0" role="button" aria-label="Retourner la carte"><small>${st.flip?'Réponse':'Question'}</small>${md(st.flip?c.back:c.front)}</div>
+  ${st.flip?`<div class="rates"><button class="btn wide red" data-act="rate" data-v="miss">À revoir (1)</button><button class="btn wide" data-act="rate" data-v="almost">Presque (2)</button><button class="btn wide" data-act="rate" data-v="know">Je sais (3)</button></div>`
+    :`<button class="btn pri wide" data-act="flip">Retourner la carte (espace)</button>`}</div>`;
+}
+
+/* --- QCM --- */
+function paneQcm(s){
+  if(T.qs&&T.qs.sid===s.id)return quizSession(s);
+  if(!s.docs.length)return noDocs(s);
+  return `<div class="gen"><h3>Créer un QCM d’entraînement</h3><div class="row">${srcSelect(s,'qcm')}${optSelect('qcmN',[[5,'5 questions'],[10,'10 questions'],[15,'15 questions']],10)}
+    ${optSelect('qcmD',QCM_LEVELS,'moyen')}
+    <button class="btn pri" data-act="genQcm">Générer le QCM</button></div>${keyHint()}</div>
+  ${s.wrongQ.length?`<div class="item" style="margin-bottom:12px"><span>Questions ratées à retravailler : <b>${s.wrongQ.length}</b></span><button class="btn" data-act="startWrong">Refaire mes erreurs</button></div>`:''}
+  ${s.quizzes.length?`<div class="list">${s.quizzes.map(q=>{const last=q.attempts[q.attempts.length-1];return `<div class="item"><span><b>${esc(q.title)}</b><br><span class="muted">${last?`Dernier score : ${last.score}/${last.total}`:'Pas encore fait'}</span></span><span class="row"><button class="btn pri sm" data-act="startQuiz" data-id="${q.id}">Lancer</button><button class="btn sm red" data-act="delQuiz" data-id="${q.id}">Supprimer</button></span></div>`;}).join('')}</div>`
+    :empty('Aucun QCM pour l’instant','Génère ton premier QCM depuis un cours : les mauvaises réponses reviennent ensuite dans « Mes erreurs ».')}`;
+}
+function quizSession(s){
+  const st=T.qs;
+  if(st.i>=st.qs.length){
+    const good=st.res.filter(r=>r.ok).length,miss=st.res.filter(r=>!r.ok);
+    return `<div class="sess"><h2>${good} bonne${good>1?'s':''} réponse${good>1?'s':''} sur ${st.qs.length}</h2>
+    ${miss.length?`<p class="muted">À revoir :</p>${miss.map(r=>`<div class="expl"><b>${renderMD(r.q.q).replace(/^<p>|<\/p>\s*$/g,'')}</b><br>Bonne réponse : ${renderMD(r.q.choices[r.q.answer]).replace(/^<p>|<\/p>\s*$/g,'')}${r.q.explanation?md(r.q.explanation):''}</div>`).join('')}`:'<p>Sans faute, bravo.</p>'}
+    <div class="row" style="margin-top:14px">${miss.length?`<button class="btn" data-act="retryMiss">Refaire les questions ratées</button>`:''}<button class="btn pri" data-act="endQuiz">Terminer</button></div></div>`;
+  }
+  const q=st.qs[st.i];
+  return `<div class="sess"><div class="sesshead"><span>${esc(st.title)} – question ${st.i+1} sur ${st.qs.length}</span><button class="link" data-act="endQuiz">Quitter</button></div>
+  <div class="qtext">${md(q.q)}</div>
+  ${q.choices.map((c,k)=>`<button class="choice ${st.sel!==null?(k===q.answer?'ok':(k===st.sel?'no':'')):''}" data-act="pick" data-k="${k}" ${st.sel!==null?'disabled':''}><span class="k">${'ABCD'[k]}</span><span>${md(c)}</span></button>`).join('')}
+  ${st.sel!==null?`${q.explanation?`<div class="expl">${md(q.explanation)}</div>`:''}<button class="btn pri wide" data-act="nextQ">${st.i+1<st.qs.length?'Question suivante (Entrée)':'Voir le résultat'}</button>`:''}</div>`;
+}
+
+/* --- Exercices --- */
+function paneExos(s){
+  if(!s.docs.length)return noDocs(s);
+  let list=s.exercises;
+  if(T.exFilter==='todo')list=list.filter(e=>!e.status||e.status==='ko'||e.status==='partial');
+  if(T.exFilter==='one')list=list.filter(e=>e.id===T.oneEx);
+  return `<div class="gen"><h3>Sortir les exercices de mes documents</h3><div class="row">${srcSelect(s,'exX')}<button class="btn pri" data-act="genExos" data-mode="extract">Extraire les exercices</button></div>
+    <p class="muted" style="font-size:14px;margin:8px 0 0">L’IA repère les énoncés dans ton cours, TD ou annale et rédige la correction.</p>${keyHint()}</div>
+  <div class="gen"><h3>Créer des exercices comme ceux que j’ai</h3><div class="row">${srcSelect(s,'exG')}${optSelect('exN',[[1,'1 exercice'],[2,'2 exercices'],[3,'3 exercices'],[5,'5 exercices']],2)}
+    ${optSelect('exD',EX_LEVELS,'comme l’original')}
+    <button class="btn pri" data-act="genExos" data-mode="similar">Générer</button></div></div>
+  <div class="row" style="margin-bottom:14px"><select data-chg="exFilter">${[['all','Tous les exercices'],['todo','À faire ou à refaire']].map(([v,l])=>`<option value="${v}" ${T.exFilter===v?'selected':''}>${l}</option>`).join('')}${T.exFilter==='one'?'<option value="one" selected>Un exercice tiré au sort</option>':''}</select>
+    <button class="btn" data-act="randomEx">Tirer un exercice au hasard</button></div>
+  ${list.length?list.map(exCard).join(''):empty('Aucun exercice à afficher','Extrais ceux de tes documents ou génère-en de nouveaux ci-dessus.')}`;
+}
+function exCard(e){
+  const st={ok:['✓ Réussi','ok'],partial:['◐ En partie','warn'],ko:['✕ Raté','bad']}[e.status];
+  const dLab=Object.fromEntries(EX_LEVELS)[e.difficulty];
+  return `<article class="exo status-${e.status||'none'}"><header><h3>${esc(e.title)}</h3><span class="row"><span class="chip">${e.source}</span>${dLab?`<span class="chip">${dLab}</span>`:''}${st?`<span class="chip ${st[1]}">${st[0]}</span>`:''}</span></header>
+  ${md(e.statement)}
+  <div class="row" style="margin-top:10px"><button class="btn sm" data-act="toggleOpen" data-id="c${e.id}">${T.open.has('c'+e.id)?'Masquer la correction':'Voir la correction'}</button>
+    <button class="btn sm" data-act="toggleOpen" data-id="a${e.id}">Corriger ma réponse</button>
+    <button class="btn sm" data-act="variants" data-id="${e.id}">Variantes</button><button class="btn sm red" data-act="delEx" data-id="${e.id}">Supprimer</button></div>
+  ${T.open.has('c'+e.id)?`<div class="corr">${md(e.correction)}</div>`:''}
+  ${T.open.has('a'+e.id)?`<div style="margin-top:12px"><textarea rows="6" data-inp="answer" data-id="${e.id}" placeholder="Écris ta résolution ici (calculs, résultats, raisonnement)…">${esc(T.answers[e.id]||'')}</textarea>
+    <div class="row" style="margin-top:8px"><button class="btn pri sm" data-act="correctAI" data-id="${e.id}">Corriger avec l’IA</button></div>${e.feedback?`<div class="fb">${md(e.feedback)}</div>`:''}</div>`:''}
+  <div class="row" style="margin-top:12px"><span class="muted">Mon résultat :</span><button class="btn sm" data-act="exStatus" data-id="${e.id}" data-v="ok">Réussi</button><button class="btn sm" data-act="exStatus" data-id="${e.id}" data-v="partial">En partie</button><button class="btn sm" data-act="exStatus" data-id="${e.id}" data-v="ko">Raté</button></div></article>`;
+}
+
+/* --- Explication --- */
+function paneExplain(s){
+  if(!s.docs.length)return noDocs(s);
+  const q=T.opts['explainQ'+s.id]||'';
+  return `<div class="gen"><h3>Un point pas clair ?</h3>
+    <p class="muted" style="margin:0 0 10px">Décris ce que tu ne comprends pas (une notion, une formule, un passage de ton cours) : l’IA te l’explique autrement, avec un exemple.</p>
+    <div class="row" style="margin-bottom:10px">${srcSelect(s,'explain')}</div>
+    <textarea rows="3" placeholder="Ex. : Je ne comprends pas pourquoi on utilise un pont diviseur de tension ici, ou : Explique-moi la différence entre gain et bande passante" data-inp="explainQ" data-id="${s.id}">${esc(q)}</textarea>
+    <div class="row" style="margin-top:10px"><button class="btn pri" data-act="genExplain">Demander une explication</button></div>${keyHint()}</div>
+  ${s.explanations.length?s.explanations.map(x=>`<article class="qa" id="qa-${x.id}" style="--c:${s.color}"><div class="q">${esc(x.question)}</div>${md(x.md)}
+    <div class="row" style="margin-top:10px"><button class="btn sm" data-act="reuseExplain" data-id="${x.id}">Poser une autre question sur ce point</button><button class="btn sm red" data-act="delExplain" data-id="${x.id}">Supprimer</button></div></article>`).join('')
+  :empty('Aucune question posée pour l’instant','Écris ce qui te bloque ci-dessus : plus c’est précis, plus la réponse sera utile.')}`;
+}
+async function askExplain(s,src,question){
+  const out=await ai([{role:'system',content:sys(s)},{role:'user',content:`Un étudiant ne comprend pas ce point : « ${question} »\nExplique-le-lui clairement en t'appuyant sur son cours : commence par une explication simple avec une image ou une analogie concrète, puis reformule avec la rigueur et le vocabulaire attendus en BUT GEII (formules en LaTeX si besoin), puis donne un mini-exemple chiffré ou concret qui illustre le point. Termine par une phrase qui indique ce qu'il faut absolument retenir. Réponds en Markdown, reste concis (une demi-page).\n\n=== COURS ===\n${srcText(src.sources)}`}],{max:1600,temperature:.4});
+  s.explanations.unshift({id:uid(),question,docId:src.sources.length===1?src.sources[0].id:null,md:out.trim(),createdAt:Date.now()});
+  save();truncNote(src);toast('Explication ajoutée.');
+}
+
+/* --- Progression --- */
+function paneProg(s){
+  const e=estimateSubject(s),n=s.log.length;
+  return `${e.rows.length?`<div class="row" style="gap:20px;align-items:center"><div style="flex:1 1 260px;--c:${s.color}">${gauge(e.mastery)}</div><b style="font-size:20px">${pct(e.mastery)} %</b></div>
+  <p class="lead" style="margin-top:12px">Il te reste environ <mark>${fmtH(e.total)}</mark> de travail pour être apte à l’évaluation.</p>
+  ${e.days!=null?(e.days>=0?`<p>Évaluation ${e.days===0?'aujourd’hui':'dans '+e.days+' jour'+(e.days>1?'s':'')} : ${e.days>0?`environ <b>${fmtH(e.perDay)} par jour</b>.`:''} ${e.perDay!=null&&e.perDay>3?'<span class="chip warn">Ça devient serré, commence aujourd’hui</span>':''}</p>`:'<p class="muted">La date d’évaluation est passée.</p>'):'<p class="muted">Renseigne la date de l’évaluation plus bas pour obtenir un temps de travail par jour.</p>'}
+  <p class="muted">${n<8?'Estimation provisoire : fais des QCM, des cartes ou des exercices pour l’affiner.':`Estimation appuyée sur ${n} résultats enregistrés.`}</p>
+  <div class="tw"><table class="prog"><thead><tr><th>Chapitre</th><th>Niveau</th><th>Résultats</th><th>Mon ressenti</th><th>Reste</th></tr></thead><tbody>
+  ${e.rows.sort((a,b)=>b.need-a.need).map(r=>`<tr style="--c:${s.color}"><td><b>${esc(r.d.title||'Sans titre')}</b><br><span class="muted">${KINDS[r.d.kind]}, ${words(r.d.content)} mots</span></td>
+    <td class="g">${gauge(r.m)}<span class="muted" style="font-size:13px">${pct(r.m)} %</span></td><td>${r.n}</td>
+    <td><select data-chg="self" data-id="${r.d.id}" aria-label="Ressenti">${[['','Pas évalué'],[1,'1 – Rien compris'],[2,'2 – Bancal'],[3,'3 – Moyen'],[4,'4 – Solide'],[5,'5 – Maîtrisé']].map(([v,l])=>`<option value="${v}" ${String(s.self[r.d.id]||'')===String(v)?'selected':''}>${l}</option>`).join('')}</select></td>
+    <td><b>${fmtH(r.need)}</b></td></tr>`).join('')}</tbody></table></div>
+  <div class="row" style="margin:16px 0"><button class="btn pri" data-act="genPlan">Créer mon plan de révision avec l’IA</button></div>${keyHint()}
+  ${s.plan?`<div class="fiche">${md(s.plan)}</div>`:''}
+  <details><summary>Comment le temps restant est calculé</summary><p class="muted" style="max-width:70ch">Chaque chapitre a un temps de référence qui dépend de sa longueur (30 minutes + 1 heure par 1000 mots, entre 30 minutes et 5 heures). Ton niveau (de 0 à 100 %) vient de tes résultats aux QCM, cartes et exercices (les plus récents comptent davantage, la moitié du poids s’efface en 2 semaines) et de ton ressenti. Temps restant = temps de référence × (85 % − niveau) ÷ 85 %. C’est une estimation : plus tu enregistres de résultats, plus elle est fiable.</p></details>`
+  :empty('Pas encore de données','Ajoute au moins un cours de plus de 20 mots dans l’onglet Cours : l’estimation apparaît ici et s’affine avec tes QCM, cartes et exercices.')}
+  <div class="set"><h3>Réglages de la matière</h3><div class="row" style="margin-top:12px">
+    <div class="field" style="margin:0"><label for="sn">Nom</label><input id="sn" value="${esc(s.name)}" data-inp="subjName"></div>
+    <div class="field" style="margin:0"><label for="sd">Date de l’évaluation</label><input id="sd" type="date" value="${esc(s.examDate)}" data-chg="examDate"></div>
+    <div class="field" style="margin:0"><label for="ss">Semestre</label><select id="ss" data-chg="mSem" data-id="${s.id}">${semOptions(s.semesterId)}</select></div></div>
+    <div class="row" style="margin-top:14px"><button class="btn red" data-act="resetStats">Remettre les statistiques à zéro</button><button class="btn red" data-act="delSubject">Supprimer la matière</button></div></div>`;
+}
+
+/* --- Gérer matières & semestres --- */
+function subRow(s,i,n){
+  return `<div class="mrow" style="--c:${s.color}"><input type="color" value="${esc(s.color)}" data-chg="mColor" data-id="${s.id}" aria-label="Couleur">
+    <input class="grow" value="${esc(s.name)}" data-inp="mName" data-id="${s.id}" aria-label="Nom de la matière">
+    <select data-chg="mSem" data-id="${s.id}" aria-label="Semestre">${semOptions(s.semesterId)}</select>
+    <input type="date" value="${esc(s.examDate)}" data-chg="mDate" data-id="${s.id}" aria-label="Date d’évaluation" title="Date d’évaluation">
+    <button class="btn sm" data-act="moveSub" data-id="${s.id}" data-d="-1" ${i===0?'disabled':''} aria-label="Monter">↑</button><button class="btn sm" data-act="moveSub" data-id="${s.id}" data-d="1" ${i===n-1?'disabled':''} aria-label="Descendre">↓</button>
+    <button class="btn sm" data-act="toggleHidden" data-id="${s.id}">${s.hidden?'Afficher l’onglet':'Masquer l’onglet'}</button>
+    <button class="btn sm" data-act="openSub" data-id="${s.id}">Ouvrir</button><button class="btn sm red" data-act="delSubjectId" data-id="${s.id}">Supprimer</button></div>`;
+}
+function viewManage(){
+  return `<div class="dash"><h1>Matières et semestres</h1>
+  <p class="muted" style="max-width:66ch">Organise ici ton année : ajoute, renomme, réordonne ou supprime tes semestres et tes matières, change la couleur d’une matière ou la date de son évaluation. Les boutons de semestre en haut de la page filtrent les onglets et le tableau de bord.</p>
+  <h2 style="margin-top:26px">Semestres</h2><div style="margin-top:12px">
+  ${S.semesters.map((x,i)=>{const n=S.subjects.filter(s=>s.semesterId===x.id).length;return `<div class="mrow" style="--c:var(--ink2)"><input class="grow" value="${esc(x.name)}" data-inp="semName" data-id="${x.id}" aria-label="Nom du semestre"><span class="muted">${n} matière${n>1?'s':''}</span>
+    <button class="btn sm" data-act="moveSem" data-id="${x.id}" data-d="-1" ${i===0?'disabled':''} aria-label="Monter">↑</button><button class="btn sm" data-act="moveSem" data-id="${x.id}" data-d="1" ${i===S.semesters.length-1?'disabled':''} aria-label="Descendre">↓</button>
+    <button class="btn sm red" data-act="delSem" data-id="${x.id}">Supprimer</button></div>`;}).join('')}
+  <button class="btn" data-act="addSem">Ajouter un semestre</button></div>
+  <h2 style="margin-top:32px">Matières</h2>
+  ${S.semesters.map(x=>{const list=S.subjects.filter(s=>s.semesterId===x.id);return `<h3 style="margin:18px 0 8px">${esc(x.name)}</h3>${list.length?list.map((s,i)=>subRow(s,i,list.length)).join(''):'<p class="muted">Aucune matière dans ce semestre.</p>'}`;}).join('')}
+  <div style="margin-top:16px"><button class="btn pri" data-act="addSubject" data-stay="1">Ajouter une matière</button></div></div>`;
+}
+function storageInfo(){
+  let kb=0;try{kb=Math.round((localStorage.getItem(KEY)||'').length*2/1024);}catch{}
+  const le=S.settings.lastExport;
+  return `<p class="muted" style="max-width:66ch">Tout est enregistré dans ce navigateur, sur cet appareil : ça reste après avoir fermé l’onglet ou éteint l’ordinateur. Seul le texte de tes cours est gardé, pas les fichiers PDF eux-mêmes. En revanche, tout disparaît si tu vides les données du site, en navigation privée, ou si tu ouvres l’appli depuis une autre adresse ou un autre navigateur. Exporte une sauvegarde de temps en temps : elle ne contient pas ta clé API.</p>
+  <p>Espace utilisé : <b>${kb>1024?(kb/1024).toFixed(1)+' Mo':kb+' Ko'}</b> sur environ 5 Mo disponibles. ${le?'Dernière sauvegarde : '+new Date(le).toLocaleDateString('fr-FR'):'<span class="chip warn">Aucune sauvegarde exportée</span>'}</p>`;
+}
+
+/* --- Réglages --- */
+function viewSettings(){
+  const models=T.models||MODELS;
+  return `<div class="dash"><h1>Réglages</h1>
+  <div class="set" style="border:0;padding-top:8px"><div class="row" style="justify-content:space-between;align-items:baseline"><h3>Mes clés API Groq</h3><button class="btn sm" data-act="toggleAllKeys">${T.showKeys?'Masquer les clés':'Afficher les clés en clair'}</button></div>
+  <p class="muted" style="max-width:62ch">La clé se crée gratuitement sur <a href="https://console.groq.com/keys" target="_blank" rel="noopener">console.groq.com/keys</a>. Elle reste dans ton navigateur et n’est envoyée qu’à Groq. Ajoute la liste de toutes tes clés (les tiennes, ou celles de camarades qui veulent bien te les prêter) : dès que l’une atteint sa limite gratuite, l’appli passe automatiquement à la suivante, en priorité celle qui a le plus de tokens restants.</p>
+  <div class="tw"><table class="prog"><thead><tr><th>#</th><th>Code API</th><th>Statut</th><th>Quota restant</th><th></th></tr></thead><tbody>
+  ${S.settings.apiKeys.map((k,i)=>{const m=(S.settings.keyMeta||{})[i];
+    const q=m?(m.remTok!=null?`≈ ${Number(m.remTok).toLocaleString('fr-FR')} tokens${m.limTok?' / '+Number(m.limTok).toLocaleString('fr-FR'):''}`:(m.remReq!=null?`${m.remReq} requête(s)`:'—')):'<span class="muted">pas encore utilisée</span>';
+    const revealed=T.showKeys||T.keyReveal.has(i);
+    return `<tr><td>${i+1}${i===S.settings.keyIdx?'<br><span class="chip ok">active</span>':''}</td>
+    <td style="min-width:220px"><div class="row"><input type="${revealed?'text':'password'}" autocomplete="off" value="${esc(k)}" placeholder="gsk_…" data-inp="apiKey" data-idx="${i}" style="flex:1 1 200px;font-family:ui-monospace,monospace">
+      <button class="btn sm" data-act="revealKey" data-idx="${i}" aria-label="${revealed?'Masquer':'Afficher'}">${revealed?'🙈':'👁'}</button></div></td>
+    <td>${k.trim()?'renseignée':'<span class="muted">vide</span>'}</td>
+    <td>${q}</td>
+    <td>${S.settings.apiKeys.length>1?`<button class="btn sm red" data-act="delKey" data-idx="${i}">Retirer</button>`:''}</td></tr>`;}).join('')}
+  </tbody></table></div>
+  <button class="btn sm" style="margin-top:10px" data-act="addKey">+ Ajouter une clé</button>
+  <div class="field" style="margin-top:16px"><label for="m">Modèle (texte)</label><input id="m" list="ml" value="${esc(S.settings.model)}" data-inp="model"><datalist id="ml">${models.map(m=>`<option value="${esc(m)}">`).join('')}</datalist></div>
+  <div class="field"><label for="vm">Modèle pour lire les images (documents scannés, écriture manuscrite)</label><input id="vm" list="ml" value="${esc(S.settings.visionModel)}" data-inp="visionModel">
+    <span class="muted" style="font-size:13px">Modèle « aperçu » chez Groq : pratique, mais pas garanti dans la durée et imparfait sur une écriture manuscrite peu lisible.</span></div>
+  <div class="field"><label for="mc">Taille maximale du cours envoyé à l’IA (caractères)</label><input id="mc" type="number" min="2000" max="40000" step="1000" value="${S.settings.maxChars}" data-inp="maxChars">
+    <span class="muted" style="font-size:14px">Plus c’est grand, plus l’IA voit de cours, mais la limite gratuite de Groq est vite atteinte. 9 000 convient bien.</span></div>
+  <div class="row"><button class="btn pri" data-act="testKey">Tester mes clés</button><button class="btn" data-act="loadModels">Charger la liste des modèles</button></div></div>
+  <div class="set"><h3>Mes données</h3>${storageInfo()}
+  <div class="row"><button class="btn" data-act="exportData">Exporter une sauvegarde</button><label class="btn">Importer une sauvegarde<input type="file" hidden accept=".json" data-chg="importData"></label><button class="btn red" data-act="wipe">Tout effacer</button></div></div></div>`;
+}
+
+/* ============================== Rendu ============================== */
+function renderTabs(){
+  const tab=(id,label,c)=>`<button class="tab ${S.ui.tab===id?'on':''}" style="--c:${c}" data-act="tab" data-id="${id}">${esc(label)}</button>`;
+  $('#sems').innerHTML=S.semesters.length>1?[['all','Tous les semestres'],...S.semesters.map(x=>[x.id,x.name])].map(([id,l])=>`<button class="pill ${S.ui.sem===id?'on':''}" data-act="setSem" data-id="${id}">${esc(l)}</button>`).join(''):'';
+  $('#tabs').innerHTML=tab('dash','Tableau de bord','var(--ink)')+tabSubjects().map(s=>tab(s.id,s.name,s.color)).join('')+
+    `<button class="tab add" data-act="addSubject">+ Matière</button><button class="tab gear ${S.ui.tab==='manage'?'on':''}" data-act="tab" data-id="manage">Gérer</button><button class="tab gear ${S.ui.tab==='settings'?'on':''}" data-act="tab" data-id="settings">Réglages</button>`;
+}
+function render(){
+  renderTabs();
+  const m=$('#main'),s=curSubject();
+  if(S.ui.tab==='dash')m.innerHTML=viewDash();
+  else if(S.ui.tab==='settings')m.innerHTML=viewSettings();
+  else if(S.ui.tab==='manage')m.innerHTML=viewManage();
+  else if(s)m.innerHTML=viewSubject(s);
+  else{S.ui.tab='dash';m.innerHTML=viewDash();}
+}
+
+/* ============================== Actions ============================== */
+const A={},C={},I={};
+document.addEventListener('click',e=>{const el=e.target.closest('[data-act]');if(el&&A[el.dataset.act]){e.preventDefault();A[el.dataset.act](el,e);}});
+document.addEventListener('change',e=>{const el=e.target.closest('[data-chg]');if(el&&C[el.dataset.chg])C[el.dataset.chg](el,e);});
+document.addEventListener('input',e=>{const el=e.target.closest('[data-inp]');if(el&&I[el.dataset.inp])I[el.dataset.inp](el,e);});
+document.addEventListener('keydown',e=>{
+  if(/INPUT|TEXTAREA|SELECT|BUTTON|A/.test(e.target.tagName)||e.metaKey||e.ctrlKey)return;
+  if(T.cs&&T.cs.i<T.cs.ids.length){if(e.key===' '){e.preventDefault();A.flip();}else if(T.cs.flip&&['1','2','3'].includes(e.key))A.rate({dataset:{v:['miss','almost','know'][+e.key-1]}});}
+  else if(T.qs&&T.qs.i<T.qs.qs.length){const k='abcd'.indexOf(e.key.toLowerCase()),k2='1234'.indexOf(e.key),kk=k>=0?k:k2;
+    if(kk>=0&&T.qs.sel===null)A.pick({dataset:{k:kk}});else if(e.key==='Enter'&&T.qs.sel!==null)A.nextQ();}
+});
+window.addEventListener('afterprint',()=>{document.querySelectorAll('.print-target').forEach(x=>x.classList.remove('print-target'));document.body.classList.remove('printing');});
+
+/* navigation */
+A.tab=el=>{S.ui.tab=el.dataset.id;save();render();window.scrollTo(0,0);};
+A.sub=el=>{S.ui.sub=el.dataset.id;if(el.closest('.doclist')===null)save();render();window.scrollTo(0,0);};
+A.go=el=>{S.ui.tab=el.dataset.id;S.ui.sub=el.dataset.sub||'cours';save();render();window.scrollTo(0,0);};
+A.addSubject=el=>{const n=(prompt('Nom de la nouvelle matière ?')||'').trim();if(!n)return;
+  const s=newSubject(n,S.subjects.length);s.semesterId=S.ui.sem!=='all'?S.ui.sem:S.semesters[0].id;S.subjects.push(s);
+  if(el&&el.dataset&&el.dataset.stay){save();render();return;}
+  S.ui.tab=s.id;S.ui.sub='cours';save();render();};
+A.setSem=el=>{S.ui.sem=el.dataset.id;const c=curSubject();if(c&&!visibleSubjects().includes(c))S.ui.tab='dash';save();render();};
+A.addSem=()=>{const n=(prompt('Nom du semestre ?','Semestre '+(S.semesters.length+1))||'').trim();if(!n)return;S.semesters.push({id:uid(),name:n});save();render();};
+I.semName=el=>{const x=S.semesters.find(y=>y.id===el.dataset.id);x.name=el.value;save();renderTabs();};
+A.moveSem=el=>{const i=S.semesters.findIndex(x=>x.id===el.dataset.id),j=i+(+el.dataset.d);if(j<0||j>=S.semesters.length)return;[S.semesters[i],S.semesters[j]]=[S.semesters[j],S.semesters[i]];save();render();};
+A.delSem=el=>{
+  if(S.semesters.length<=1){toast('Garde au moins un semestre.','bad');return;}
+  const x=S.semesters.find(y=>y.id===el.dataset.id),rest=S.semesters.filter(y=>y.id!==x.id),n=S.subjects.filter(s=>s.semesterId===x.id).length;
+  if(!confirm(n?`Supprimer « ${x.name} » ? Ses ${n} matière${n>1?'s':''} ser${n>1?'ont':'a'} déplacée${n>1?'s':''} vers « ${rest[0].name} ».`:`Supprimer « ${x.name} » ?`))return;
+  S.subjects.forEach(s=>{if(s.semesterId===x.id)s.semesterId=rest[0].id;});S.semesters=rest;if(S.ui.sem===x.id)S.ui.sem='all';save();render();};
+I.mName=el=>{const s=S.subjects.find(x=>x.id===el.dataset.id);s.name=el.value;save();renderTabs();};
+C.mSem=el=>{const s=S.subjects.find(x=>x.id===el.dataset.id);s.semesterId=el.value;if(S.ui.tab===s.id&&S.ui.sem!=='all')S.ui.sem=el.value;save();render();};
+C.mColor=el=>{S.subjects.find(x=>x.id===el.dataset.id).color=el.value;save();render();};
+C.mDate=el=>{S.subjects.find(x=>x.id===el.dataset.id).examDate=el.value;save();};
+A.moveSub=el=>{const s=S.subjects.find(x=>x.id===el.dataset.id),same=S.subjects.filter(x=>x.semesterId===s.semesterId),o=same[same.indexOf(s)+(+el.dataset.d)];if(!o)return;
+  const a=S.subjects.indexOf(s),b=S.subjects.indexOf(o);[S.subjects[a],S.subjects[b]]=[S.subjects[b],S.subjects[a]];save();render();};
+A.delSubjectId=el=>{const s=S.subjects.find(x=>x.id===el.dataset.id);if(!confirm(`Supprimer « ${s.name} » avec tous ses cours, fiches, cartes et exercices ?`))return;
+  S.subjects=S.subjects.filter(x=>x.id!==s.id);if(S.ui.tab===s.id)S.ui.tab='manage';save();render();};
+A.openSub=el=>{const s=S.subjects.find(x=>x.id===el.dataset.id);S.ui.tab=s.id;S.ui.sub='cours';if(S.ui.sem!=='all')S.ui.sem=s.semesterId;save();render();window.scrollTo(0,0);};
+A.toggleHidden=el=>{const s=S.subjects.find(x=>x.id===el.dataset.id);s.hidden=!s.hidden;save();render();};
+A.delSubject=()=>{const s=curSubject();if(!confirm(`Supprimer « ${s.name} » avec tous ses cours, fiches, cartes et exercices ?`))return;S.subjects=S.subjects.filter(x=>x.id!==s.id);S.ui.tab='dash';save();render();};
+A.resetStats=()=>{const s=curSubject();if(!confirm('Effacer les résultats enregistrés (QCM, cartes, exercices, ressenti) pour cette matière ?'))return;s.log=[];s.self={};s.wrongQ=[];save();render();};
+I.subjName=el=>{const s=curSubject();s.name=el.value;save();renderTabs();const h=$('.subhead h1');if(h)h.textContent=s.name;};
+C.examDate=el=>{curSubject().examDate=el.value;save();render();};
+C.opt=el=>{T.opts[el.dataset.k]=el.value;};
+C.exFilter=el=>{T.exFilter=el.value;render();};
+C.self=el=>{const s=curSubject();if(el.value)s.self[el.dataset.id]=+el.value;else delete s.self[el.dataset.id];save();render();};
+
+/* cours */
+A.newDoc=()=>{const s=curSubject(),d={id:uid(),title:'',kind:'cours',content:'',createdAt:Date.now()};s.docs.push(d);T.docId[s.id]=d.id;T.showParts=false;save();render();const t=$('.editor .title');if(t)t.focus();};
+A.selDoc=el=>{T.docId[curSubject().id]=el.dataset.id;T.showParts=false;render();};
+A.delDoc=()=>{const s=curSubject(),d=curDoc();if(!d||!confirm(`Supprimer « ${d.title||'ce document'} » ?`))return;s.docs=s.docs.filter(x=>x.id!==d.id);delete s.self[d.id];delete T.docId[s.id];save();render();};
+A.toggleParts=()=>{T.showParts=!T.showParts;render();};
+I.docTitle=el=>{const d=curDoc();d.title=el.value;save();const b=$('.doc.on b');if(b)b.textContent=el.value||'Sans titre';};
+I.docBody=el=>{curDoc().content=el.value;save();};
+C.docKind=el=>{curDoc().kind=el.value;save();render();};
+async function initPdf(){
+  if(initPdf.done)return;const V='3.11.174',W=`https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${V}/pdf.worker.min.js`;
+  try{const r=await fetch(W);pdfjsLib.GlobalWorkerOptions.workerSrc=URL.createObjectURL(new Blob([await r.text()],{type:'text/javascript'}));}catch{pdfjsLib.GlobalWorkerOptions.workerSrc=W;}
+  initPdf.done=true;
+}
+async function pdfToText(file){
+  if(!window.pdfjsLib)throw new Error('lecteur PDF non chargé (connexion internet requise)');
+  await initPdf();const pdf=await pdfjsLib.getDocument({data:await file.arrayBuffer()}).promise;let out='';
+  for(let p=1;p<=pdf.numPages;p++){const tc=await(await pdf.getPage(p)).getTextContent();let text='',lastY=null;
+    for(const it of tc.items){const y=it.transform[5];if(lastY!==null&&Math.abs(y-lastY)>3)text+='\n';else if(text&&!/[ \n]$/.test(text))text+=' ';text+=it.str;lastY=y;}
+    out+=text+'\n\n';}
+  return{text:out,numPages:pdf.numPages,pdf};
+}
+/* Lecture d'images (photo/scan, écriture manuscrite) via un modèle Groq multimodal */
+const OCR_PROMPTS={
+  garder:'Transcris fidèlement tout le texte visible sur cette image (imprimé ET manuscrit). Respecte la structure (titres, listes, tableaux simples) en Markdown. Les formules en LaTeX ($...$ ou $$...$$). Si un passage est vraiment illisible, indique [illisible] à cet endroit sans t’arrêter.',
+  sansmanuscrit:'Transcris UNIQUEMENT le texte imprimé ou tapé à la machine sur cette image. Ignore complètement toute écriture ou annotation manuscrite (stylo, feutre, surlignage manuscrit). Respecte la structure en Markdown, formules en LaTeX.',
+  seulmanuscrit:'Transcris UNIQUEMENT ce qui est écrit ou annoté à la main sur cette image (notes, corrections, ajouts manuscrits). Ignore le texte imprimé ou tapé à la machine. Si rien n’est manuscrit, réponds exactement : (aucune écriture manuscrite détectée).'
+};
+function fileToDataURL(file){return new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result);r.onerror=()=>rej(new Error('lecture du fichier impossible'));r.readAsDataURL(file);});}
+function resizeImage(dataUrl,maxDim=1500,quality=.82){
+  return new Promise(res=>{
+    let done=false;const finish=v=>{if(done)return;done=true;res(v);};
+    try{
+      const img=new Image();
+      img.onload=()=>{
+        try{
+          let{width:w,height:h}=img;
+          if(w>maxDim||h>maxDim){const r=Math.min(maxDim/w,maxDim/h);w=Math.round(w*r);h=Math.round(h*r);}
+          const c=document.createElement('canvas');c.width=w;c.height=h;
+          const ctx=c.getContext('2d');ctx.drawImage(img,0,0,w,h);
+          finish(c.toDataURL('image/jpeg',quality));
+        }catch(e){finish(dataUrl);}
+      };
+      img.onerror=()=>finish(dataUrl);
+      img.src=dataUrl;
+      setTimeout(()=>finish(dataUrl),4000);
+    }catch(e){finish(dataUrl);}
+  });
+}
+async function pdfPageToImage(pdf,pageNum,scale=1.6){
+  const page=await pdf.getPage(pageNum),vp=page.getViewport({scale});
+  const c=document.createElement('canvas');c.width=vp.width;c.height=vp.height;
+  await page.render({canvasContext:c.getContext('2d'),viewport:vp}).promise;
+  return c.toDataURL('image/jpeg',.85);
+}
+async function ocrImage(dataUrl,mode){
+  if(!hasKey())throw new Error('Ajoute une clé API Groq dans Réglages pour lire une image.');
+  const out=await ai([{role:'user',content:[{type:'text',text:OCR_PROMPTS[mode]||OCR_PROMPTS.garder},{type:'image_url',image_url:{url:dataUrl}}]}],{model:S.settings.visionModel||VISION_MODEL,max:2200,temperature:.15});
+  return out.trim();
+}
+const PDF_SCAN_PAGE_CAP=20;
+C.importFile=async el=>{
+  const s=curSubject(),files=[...el.files],ocrMode=T.opts.ocrMode||'garder';el.value='';if(!files.length)return;
+  let n=0;
+  for(const f of files){
+    setBusy(`Import de ${f.name}…`);
+    try{
+      const ext=f.name.split('.').pop().toLowerCase();
+      let text='',ocr=false;
+      if(['png','jpg','jpeg','webp'].includes(ext)){
+        setBusy(`Lecture de ${f.name} par l’IA (OCR)…`);
+        const raw=await fileToDataURL(f),small=await resizeImage(raw);
+        text=await ocrImage(small,ocrMode);ocr=true;
+      }else if(ext==='pdf'){
+        const{text:t,numPages,pdf}=await pdfToText(f);
+        const dense=numPages>0&&(words(t)/numPages)>=12;
+        if(dense){text=t;}
+        else{
+          const pages=Math.min(numPages,PDF_SCAN_PAGE_CAP);
+          let acc='';
+          for(let p=1;p<=pages;p++){
+            setBusy(`Lecture de ${f.name} par l’IA (page ${p}/${pages})…`);
+            const img=await pdfPageToImage(pdf,p);
+            const pt=await ocrImage(img,ocrMode);
+            acc+=(acc?'\n\n':'')+pt;
+          }
+          if(numPages>PDF_SCAN_PAGE_CAP)toast(`${f.name} : seules les ${PDF_SCAN_PAGE_CAP} premières pages ont été lues (document scanné trop long, importe le reste séparément).`,'bad');
+          text=acc;ocr=true;
+        }
+      }else{
+        text=await f.text();
+      }
+      if(!text.trim())throw new Error(ocr?'l’IA n’a rien pu lire sur ce document':'aucun texte trouvé');
+      const d={id:uid(),title:f.name.replace(/\.[^.]+$/,''),kind:'cours',content:text.trim(),ocr,createdAt:Date.now()};
+      s.docs.push(d);T.docId[s.id]=d.id;n++;
+    }catch(err){toast(`${f.name} : ${err.message}`,'bad');}
+  }
+  setBusy(null);if(n){save();toast(`${n} document${n>1?'s':''} importé${n>1?'s':''}.`);}render();
+};
+A.partGen=el=>{
+  const s=curSubject(),d=curDoc(),p=splitSections(d.content)[+el.dataset.i];if(!p)return;
+  const src=budget([{id:d.id,title:(d.title||'Cours')+' – '+p.title,text:p.text}]),kind=el.dataset.kind;
+  withAI('L’IA travaille sur cette partie…',async()=>{
+    if(kind==='fiche')await makeFiche(s,src,'complete');
+    else if(kind==='qcm')await makeQcm(s,src,5,'moyen');
+    else await makeCards(s,src,8);
+  });
+};
+
+/* fiches */
+A.genFiche=()=>{const s=curSubject();withAI('Rédaction de la fiche…',async()=>makeFiche(s,sourcesFor(s,getSrc(s,'fiche')),T.opts.ficheType||'complete'));};
+A.editFiche=el=>{const id=el.dataset.id;T.edit.has(id)?T.edit.delete(id):T.edit.add(id);render();};
+I.ficheMd=el=>{const f=curSubject().fiches.find(x=>x.id===el.dataset.id);f.md=el.value;save();};
+A.delFiche=el=>{const s=curSubject();if(!confirm('Supprimer cette fiche ?'))return;s.fiches=s.fiches.filter(f=>f.id!==el.dataset.id);save();render();};
+A.copyFiche=async el=>{const f=curSubject().fiches.find(x=>x.id===el.dataset.id);try{await navigator.clipboard.writeText(f.md);toast('Fiche copiée (Markdown).');}catch{toast('Copie impossible : sélectionne le texte à la main.','bad');}};
+A.printFiche=el=>{const n=document.getElementById('fiche-'+el.dataset.id);n.classList.add('print-target');document.body.classList.add('printing');window.print();};
+
+/* cartes */
+A.genCards=()=>{const s=curSubject();withAI('Création des cartes…',async()=>makeCards(s,sourcesFor(s,getSrc(s,'cards')),+(T.opts.cardsN||15)));};
+A.addCard=()=>{const s=curSubject(),f=$('#nf').value.trim(),b=$('#nb').value.trim();if(!f||!b){toast('Remplis le recto et le verso.','bad');return;}s.cards.push({id:uid(),docId:T.docId[s.id]||null,front:f,back:b,box:0,due:0});save();render();};
+A.delCard=el=>{const s=curSubject();s.cards=s.cards.filter(c=>c.id!==el.dataset.id);save();render();};
+A.startCards=el=>{const s=curSubject();let pool=el.dataset.mode==='all'?s.cards:s.cards.filter(c=>c.due<=Date.now());
+  if(!pool.length){toast(s.cards.length?'Rien à revoir aujourd’hui : bravo. Utilise « Tout réviser » si tu veux continuer.':'Crée d’abord des cartes.');return;}
+  T.cs={sid:s.id,ids:shuffle(pool).map(c=>c.id),i:0,flip:false,stats:{know:0,almost:0,miss:0}};render();};
+A.flip=()=>{if(!T.cs)return;T.cs.flip=!T.cs.flip;render();};
+A.rate=el=>{
+  const st=T.cs,s=curSubject(),c=s.cards.find(x=>x.id===st.ids[st.i]),v=el.dataset.v,INT=[0,1,3,7,16,35];
+  if(v==='know'){c.box=Math.min(5,c.box+1);c.due=Date.now()+INT[c.box]*864e5;}
+  else if(v==='almost'){c.due=Date.now()+864e5;}
+  else{c.box=0;c.due=Date.now();st.ids.push(c.id);}
+  logEntry(s,'carte',c.docId,v==='know'?1:v==='almost'?.5:0);st.stats[v]++;st.i++;st.flip=false;save();render();
+};
+A.endCards=()=>{T.cs=null;render();};
+
+/* qcm */
+A.genQcm=()=>{const s=curSubject();withAI('Création du QCM…',async()=>makeQcm(s,sourcesFor(s,getSrc(s,'qcm')),+(T.opts.qcmN||10),T.opts.qcmD||'moyen'));};
+A.delQuiz=el=>{const s=curSubject();if(!confirm('Supprimer ce QCM ?'))return;s.quizzes=s.quizzes.filter(q=>q.id!==el.dataset.id);save();render();};
+A.startQuiz=el=>{const s=curSubject(),q=s.quizzes.find(x=>x.id===el.dataset.id);T.qs={sid:s.id,quizId:q.id,title:q.title,qs:shuffle(q.questions),i:0,sel:null,res:[]};render();window.scrollTo(0,0);};
+A.startWrong=()=>{const s=curSubject();T.qs={sid:s.id,quizId:null,title:'Mes erreurs',qs:shuffle(s.wrongQ),i:0,sel:null,res:[]};render();};
+A.pick=el=>{
+  const st=T.qs;if(!st||st.sel!==null)return;const k=+el.dataset.k,q=st.qs[st.i],ok=k===q.answer,s=curSubject();
+  st.sel=k;st.res.push({q,ok});logEntry(s,'qcm',q.docId,ok?1:0);
+  if(ok)s.wrongQ=s.wrongQ.filter(w=>w.q!==q.q);else if(!s.wrongQ.some(w=>w.q===q.q))s.wrongQ.push(q);
+  save();render();
+};
+A.nextQ=()=>{
+  const st=T.qs;if(!st)return;st.i++;st.sel=null;
+  if(st.i>=st.qs.length&&st.quizId){const s=curSubject(),q=s.quizzes.find(x=>x.id===st.quizId);if(q){q.attempts.push({t:Date.now(),score:st.res.filter(r=>r.ok).length,total:st.qs.length});save();}}
+  render();window.scrollTo(0,0);
+};
+A.retryMiss=()=>{const st=T.qs;T.qs={sid:st.sid,quizId:null,title:'Questions ratées',qs:shuffle(st.res.filter(r=>!r.ok).map(r=>r.q)),i:0,sel:null,res:[]};render();};
+A.endQuiz=()=>{T.qs=null;render();};
+
+/* exercices */
+A.genExos=el=>{const s=curSubject(),mode=el.dataset.mode;
+  withAI(mode==='extract'?'Extraction des exercices…':'Création des exercices…',async()=>{
+    const src=sourcesFor(s,getSrc(s,mode==='extract'?'exX':'exG'));T.exFilter='all';
+    await makeExos(s,src,mode,+(T.opts.exN||2),T.opts.exD||'comme l’original');});};
+A.variants=el=>{const s=curSubject(),e=s.exercises.find(x=>x.id===el.dataset.id);
+  withAI('Création de variantes…',async()=>{
+    const src=budget([{id:e.docId,title:e.title,text:e.statement+'\n\nCorrection :\n'+e.correction}]);T.exFilter='all';
+    await makeExos(s,src,'similar',2,e.difficulty||'comme l’original');});};
+A.toggleOpen=el=>{const id=el.dataset.id;T.open.has(id)?T.open.delete(id):T.open.add(id);render();};
+I.answer=el=>{T.answers[el.dataset.id]=el.value;};
+A.delEx=el=>{const s=curSubject();if(!confirm('Supprimer cet exercice ?'))return;s.exercises=s.exercises.filter(x=>x.id!==el.dataset.id);save();render();};
+A.exStatus=el=>{const s=curSubject(),e=s.exercises.find(x=>x.id===el.dataset.id),v=el.dataset.v;e.status=v;logEntry(s,'exo',e.docId,v==='ok'?1:v==='partial'?.5:0);save();toast('Résultat enregistré.');render();};
+A.randomEx=()=>{const s=curSubject();if(!s.exercises.length){toast('Aucun exercice pour l’instant.');return;}
+  const w=e=>e.status==='ok'?.5:e.status==='partial'?2:3;const pool=s.exercises.flatMap(e=>Array(Math.round(w(e)*2)).fill(e));
+  T.oneEx=pool[Math.floor(Math.random()*pool.length)].id;T.exFilter='one';render();};
+A.correctAI=el=>{const s=curSubject(),e=s.exercises.find(x=>x.id===el.dataset.id),ans=(T.answers[e.id]||'').trim();
+  if(ans.length<5){toast('Écris d’abord ta réponse.','bad');return;}
+  withAI('Correction en cours…',async()=>{
+    const out=await ai([{role:'system',content:sys(s)},{role:'user',content:`Corrige la réponse d'un étudiant.\n\n=== ÉNONCÉ ===\n${e.statement}\n\n=== CORRECTION DE RÉFÉRENCE ===\n${e.correction}\n\n=== RÉPONSE DE L'ÉTUDIANT ===\n${ans}\n\nIndique ce qui est juste, les erreurs (avec explication), une note sur 20, et ce qu'il faut retravailler. Sois bienveillant mais exigeant. Termine par une dernière ligne exactement de la forme : VERDICT: réussi  ou  VERDICT: partiel  ou  VERDICT: raté`}],{max:1500,temperature:.2});
+    const m=out.match(/VERDICT\s*:\s*(réussi|partiel|raté)/i);
+    e.feedback=out.replace(/VERDICT\s*:.*$/im,'').trim();
+    if(m){const v=m[1].toLowerCase();e.status=v==='réussi'?'ok':v==='partiel'?'partial':'ko';logEntry(s,'exo',e.docId,v==='réussi'?1:v==='partiel'?.5:0);}
+    save();});};
+
+/* progression : plan IA */
+I.explainQ=el=>{T.opts['explainQ'+el.dataset.id]=el.value;};
+A.genExplain=()=>{const s=curSubject(),q=(T.opts['explainQ'+s.id]||'').trim();
+  if(q.length<4){toast('Écris d’abord ce qui te pose problème.','bad');return;}
+  withAI('Explication en cours…',async()=>{await askExplain(s,sourcesFor(s,getSrc(s,'explain')),q);T.opts['explainQ'+s.id]='';});};
+A.reuseExplain=el=>{const s=curSubject(),x=s.explanations.find(y=>y.id===el.dataset.id);T.opts['explainQ'+s.id]=x.question;S.ui.sub='explain';render();window.scrollTo(0,0);const t=document.querySelector('[data-inp=explainQ]');if(t)t.focus();};
+A.delExplain=el=>{const s=curSubject();if(!confirm('Supprimer cette explication ?'))return;s.explanations=s.explanations.filter(x=>x.id!==el.dataset.id);save();render();};
+A.genPlan=()=>{const s=curSubject(),e=estimateSubject(s);
+  withAI('Construction du plan…',async()=>{
+    const data=e.rows.map(r=>({chapitre:r.d.title||'Sans titre',niveau_pct:pct(r.m),resultats_enregistres:r.n,heures_restantes:+r.need.toFixed(1)}));
+    const out=await ai([{role:'system',content:sys(s)},{role:'user',content:`Voici l'état de mes révisions.\nChapitres : ${JSON.stringify(data)}\nJours avant l'évaluation : ${e.days??'date non renseignée'}\nTemps total estimé : ${e.total.toFixed(1)} h.\n\nConstruis un plan de révision réaliste, jour par jour (14 jours maximum, ou moins si l'évaluation est plus proche), qui priorise mes points faibles et alterne fiches, cartes, QCM et exercices. Indique une durée pour chaque séance. Termine par 3 conseils courts. Réponds en Markdown.`}],{max:2000,temperature:.4});
+    s.plan=out.trim();save();});};
+
+/* réglages */
+I.apiKey=el=>{const i=+el.dataset.idx;S.settings.apiKeys[i]=el.value;save();};
+A.addKey=()=>{S.settings.apiKeys.push('');save();render();const inputs=document.querySelectorAll('[data-inp=apiKey]');if(inputs.length)inputs[inputs.length-1].focus();};
+A.delKey=el=>{const i=+el.dataset.idx;if(S.settings.apiKeys.length<=1){toast('Garde au moins une clé.','bad');return;}S.settings.apiKeys.splice(i,1);T.keyReveal=new Set([...T.keyReveal].map(x=>x>i?x-1:x).filter(x=>x!==i));if(S.settings.keyIdx>=S.settings.apiKeys.length)S.settings.keyIdx=0;save();render();};
+A.toggleAllKeys=()=>{T.showKeys=!T.showKeys;T.keyReveal.clear();render();};
+A.revealKey=el=>{const i=+el.dataset.idx;if(T.keyReveal.has(i))T.keyReveal.delete(i);else T.keyReveal.add(i);render();};
+I.model=el=>{S.settings.model=el.value.trim();save();};
+I.visionModel=el=>{S.settings.visionModel=el.value.trim();save();};
+I.maxChars=el=>{const v=+el.value;if(v>=2000&&v<=40000){S.settings.maxChars=v;save();}};
+A.testKey=()=>withAI('Test des clés…',async()=>{
+  const keys=apiKeys();if(!keys.length)throw new Error('Ajoute au moins une clé.');
+  let ok=0;
+  for(let i=0;i<keys.length;i++){
+    try{await callOnce(keys[i],[{role:'user',content:'Réponds uniquement par le mot : OK'}],false,0,10);ok++;}
+    catch(e){toast(`Clé ${i+1} : ${e.status===401?'invalide':e.status===429?'limite atteinte pour le moment':'erreur ('+e.message+')'}`,'bad');}
+  }
+  toast(`${ok}/${keys.length} clé(s) fonctionnelle(s).`,ok?'ok':'bad');
+});
+A.loadModels=()=>withAI('Chargement des modèles…',async()=>{
+  const key=apiKeys()[0];if(!key)throw new Error('Ajoute d’abord une clé API.');
+  const r=await fetch(GROQ+'/models',{headers:{Authorization:'Bearer '+key}});if(!r.ok)throw new Error('Impossible de lire la liste (clé invalide ?).');
+  const d=await r.json();T.models=(d.data||[]).map(m=>m.id).filter(id=>!/whisper|tts|guard|playai|embed|orpheus/i.test(id)).sort();toast(T.models.length+' modèles disponibles.');});
+A.exportData=()=>{S.settings.lastExport=Date.now();save();const copy=JSON.parse(JSON.stringify(S));copy.settings.apiKeys=copy.settings.apiKeys.map(()=>'');copy.settings.keyIdx=0;download(`revis-geii-${new Date().toISOString().slice(0,10)}.json`,JSON.stringify(copy,null,1));toast('Sauvegarde téléchargée.');render();};
+C.importData=async el=>{const f=el.files[0];el.value='';if(!f)return;
+  try{const d=migrate(JSON.parse(await f.text()));if(!d.subjects.length)throw new Error('fichier vide');if(!confirm('Remplacer toutes tes données actuelles par cette sauvegarde ?'))return;
+    d.settings.apiKeys=S.settings.apiKeys;d.settings.keyIdx=S.settings.keyIdx;d.settings.model=S.settings.model||d.settings.model;S=d;save();toast('Sauvegarde importée.');render();}
+  catch(e){toast('Fichier invalide : '+e.message,'bad');}};
+A.wipe=()=>{if(!confirm('Effacer TOUTES tes données (cours, fiches, cartes, résultats) ?'))return;const k=S.settings;S=defaultState();S.settings=k;S.ui.tab='dash';save();render();};
+
+render();
+try{if(navigator.storage&&navigator.storage.persist)navigator.storage.persist();}catch(e){}
+</script>
+</body>
+</html>
